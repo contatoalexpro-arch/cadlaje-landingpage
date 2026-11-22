@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CADLAJE na Megaobra</title>
+<meta name="description" content="Transforme horas de projeto em minutos. Projeto e orçamento de lajes pré-moldadas para engenheiros e fabricantes. Acesso gratuito para visitantes da Megaobra 2026.">
+<meta name="theme-color" content="#0d182d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CADLAJE · Acesso especial Megaobra 2026">
+<meta property="og:description" content="Transforme horas de projeto em minutos. Para engenheiros e fabricantes de lajes pré-moldadas.">
+<link rel="preload" href="fonts/poppins-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* Fontes servidas pela própria página (Poppins, Figtree e Chakra Petch) */
+@font-face { font-family: 'Poppins Local'; font-weight: 600; font-display: swap; src: url('fonts/poppins-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Poppins Local'; font-weight: 700; font-display: swap; src: url('fonts/poppins-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Poppins Local'; font-weight: 800; font-display: swap; src: url('fonts/poppins-latin-800-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Figtree Local'; font-weight: 400; font-display: swap; src: url('fonts/figtree-latin-400-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Figtree Local'; font-weight: 500; font-display: swap; src: url('fonts/figtree-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Figtree Local'; font-weight: 600; font-display: swap; src: url('fonts/figtree-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Figtree Local'; font-weight: 700; font-display: swap; src: url('fonts/figtree-latin-700-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Chakra Local'; font-weight: 500; font-display: swap; src: url('fonts/chakra-petch-latin-500-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Chakra Local'; font-weight: 600; font-display: swap; src: url('fonts/chakra-petch-latin-600-normal.woff2') format('woff2'); }
+@font-face { font-family: 'Chakra Local'; font-weight: 700; font-display: swap; src: url('fonts/chakra-petch-latin-700-normal.woff2') format('woff2'); }
+
+:root {
+  /* Layout: entrada com a pergunta "engenheiro ou fabricante?" sobre a imagem do notebook e do celular ·
+     uma página para cada perfil (#engenheiros, #fabricantes) · oferta Megaobra com formulário em cartão no fim das duas */
+  --navy: #0d182d;
+  --navy-2: #15294b;
+  --orange: #f67214;
+  --orange-2: #fb8824;
+  --orange-deep: #e35d03;   /* laranja para títulos e números grandes sobre fundo claro */
+  --orange-ink: #b84a00;    /* laranja para letras pequenas sobre fundo claro (contraste 5:1) */
+  --paper: #ffffff;
+  --mist: #f2f5f9;
+  --ink: #0d182d;
+  --muted: #55627a;
+  --line: #dde3ec;
+  --font-display: 'Poppins Local', 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Figtree Local', 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-tech: 'Chakra Local', 'Chakra Petch', ui-monospace, 'Segoe UI', sans-serif;
+  --gutter: clamp(16px, 4vw, 32px);
+  /* Hexágono da logo e do folheto (ponta para cima, cantos arredondados), em porcentagem da caixa quadrada */
+  --hexa: polygon(45.00% 2.89%, 47.41% 1.89%, 50.00% 1.55%, 52.59% 1.89%, 55.00% 2.89%, 88.30% 22.11%, 90.37% 23.70%, 91.96% 25.77%, 92.96% 28.19%, 93.30% 30.77%, 93.30% 69.23%, 92.96% 71.81%, 91.96% 74.23%, 90.37% 76.30%, 88.30% 77.89%, 55.00% 97.11%, 52.59% 98.11%, 50.00% 98.45%, 47.41% 98.11%, 45.00% 97.11%, 11.70% 77.89%, 9.63% 76.30%, 8.04% 74.23%, 7.04% 71.81%, 6.70% 69.23%, 6.70% 30.77%, 7.04% 28.19%, 8.04% 25.77%, 9.63% 23.70%, 11.70% 22.11%);
+  --hexa-aro: polygon(evenodd, 45.00% 2.89%, 47.41% 1.89%, 50.00% 1.55%, 52.59% 1.89%, 55.00% 2.89%, 88.30% 22.11%, 90.37% 23.70%, 91.96% 25.77%, 92.96% 28.19%, 93.30% 30.77%, 93.30% 69.23%, 92.96% 71.81%, 91.96% 74.23%, 90.37% 76.30%, 88.30% 77.89%, 55.00% 97.11%, 52.59% 98.11%, 50.00% 98.45%, 47.41% 98.11%, 45.00% 97.11%, 11.70% 77.89%, 9.63% 76.30%, 8.04% 74.23%, 7.04% 71.81%, 6.70% 69.23%, 6.70% 30.77%, 7.04% 28.19%, 8.04% 25.77%, 9.63% 23.70%, 11.70% 22.11%, 45.00% 2.89%, 46.82% 6.04%, 48.35% 5.40%, 50.00% 5.18%, 51.65% 5.40%, 53.18% 6.04%, 86.48% 25.26%, 87.80% 26.27%, 88.81% 27.59%, 89.45% 29.13%, 89.66% 30.77%, 89.66% 69.23%, 89.45% 70.87%, 88.81% 72.41%, 87.80% 73.73%, 86.48% 74.74%, 53.18% 93.96%, 51.65% 94.60%, 50.00% 94.82%, 48.35% 94.60%, 46.82% 93.96%, 13.52% 74.74%, 12.20% 73.73%, 11.19% 72.41%, 10.55% 70.87%, 10.34% 69.23%, 10.34% 30.77%, 10.55% 29.13%, 11.19% 27.59%, 12.20% 26.27%, 13.52% 25.26%, 46.82% 6.04%);
+  --hexa-g: polygon(46.50% 2.02%, 48.19% 1.32%, 50.00% 1.08%, 51.81% 1.32%, 53.50% 2.02%, 89.80% 22.98%, 91.25% 24.09%, 92.36% 25.54%, 93.06% 27.23%, 93.30% 29.04%, 93.30% 70.96%, 93.06% 72.77%, 92.36% 74.46%, 91.25% 75.91%, 89.80% 77.02%, 53.50% 97.98%, 51.81% 98.68%, 50.00% 98.92%, 48.19% 98.68%, 46.50% 97.98%, 10.20% 77.02%, 8.75% 75.91%, 7.64% 74.46%, 6.94% 72.77%, 6.70% 70.96%, 6.70% 29.04%, 6.94% 27.23%, 7.64% 25.54%, 8.75% 24.09%, 10.20% 22.98%);
+  --hexa-fio: polygon(evenodd, 46.50% 2.02%, 48.19% 1.32%, 50.00% 1.08%, 51.81% 1.32%, 53.50% 2.02%, 89.80% 22.98%, 91.25% 24.09%, 92.36% 25.54%, 93.06% 27.23%, 93.30% 29.04%, 93.30% 70.96%, 93.06% 72.77%, 92.36% 74.46%, 91.25% 75.91%, 89.80% 77.02%, 53.50% 97.98%, 51.81% 98.68%, 50.00% 98.92%, 48.19% 98.68%, 46.50% 97.98%, 10.20% 77.02%, 8.75% 75.91%, 7.64% 74.46%, 6.94% 72.77%, 6.70% 70.96%, 6.70% 29.04%, 6.94% 27.23%, 7.64% 25.54%, 8.75% 24.09%, 10.20% 22.98%, 46.50% 2.02%, 46.65% 2.28%, 48.26% 1.61%, 50.00% 1.38%, 51.74% 1.61%, 53.35% 2.28%, 89.65% 23.23%, 91.04% 24.30%, 92.11% 25.69%, 92.78% 27.31%, 93.01% 29.04%, 93.01% 70.96%, 92.78% 72.69%, 92.11% 74.31%, 91.04% 75.70%, 89.65% 76.77%, 53.35% 97.72%, 51.74% 98.39%, 50.00% 98.62%, 48.26% 98.39%, 46.65% 97.72%, 10.35% 76.77%, 8.96% 75.70%, 7.89% 74.31%, 7.22% 72.69%, 6.99% 70.96%, 6.99% 29.04%, 7.22% 27.31%, 7.89% 25.69%, 8.96% 24.30%, 10.35% 23.23%, 46.65% 2.28%);
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.6 var(--font-body); }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; }
+p { margin: 0; text-wrap: pretty; }
+ul, ol { margin: 0; padding: 0; }
+.wrap { width: min(1180px, 100% - 2 * var(--gutter)); margin-inline: auto; }
+section[id], article[id] { scroll-margin-top: 88px; }
+:focus-visible { outline: 3px solid var(--orange-2); outline-offset: 3px; border-radius: 6px; }
+.i { width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+
+/* Botões */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; font: 700 1rem/1.2 var(--font-display); text-decoration: none; border-radius: 999px; padding: 12px 14px 12px 24px; border: 0; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease; }
+.btn-orange { background: linear-gradient(180deg, #fd9a3e 0%, var(--orange) 55%, #e86308 100%); color: var(--navy); box-shadow: 0 10px 24px -8px rgba(246,114,20,.6), inset 0 1px 0 rgba(255,255,255,.35); }
+.btn-orange:hover { transform: translateY(-1px); box-shadow: 0 14px 28px -8px rgba(246,114,20,.7), inset 0 1px 0 rgba(255,255,255,.35); }
+.btn .arrow { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--navy); color: #fff; font-size: 18px; transition: transform .2s ease; }
+.btn:hover .arrow { transform: translateX(3px); }
+.btn-ghost { color: #fff; background: transparent; border: 1.5px solid rgba(255,255,255,.32); padding: 12px 22px; }
+.btn-ghost:hover { border-color: #fff; }
+.btn-block { width: 100%; }
+
+/* Cabeçalho */
+.top { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 74px; }
+.top .logo { flex: none; }
+.top .logo img { height: 54px; width: auto; }
+.switch { display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: var(--mist); border: 1px solid var(--line); }
+.switch a { padding: 8px 18px; border-radius: 999px; text-decoration: none; font: 600 .92rem/1.2 var(--font-body); color: var(--muted); white-space: nowrap; }
+.switch a:hover { color: var(--ink); }
+.switch a[aria-current="page"] { background: var(--navy); color: #fff; }
+.switch .short { display: none; }
+.top .btn { padding: 8px 8px 8px 18px; font-size: .92rem; gap: 10px; }
+.top .btn .arrow { width: 28px; height: 28px; font-size: 14px; }
+body[data-view="inicio"] .switch { display: none; }
+
+/* Abertura (as três páginas) */
+.hero { position: relative; isolation: isolate; overflow: hidden; color: #fff; background: linear-gradient(160deg, #17325d 0%, #10223f 45%, #0b172e 100%); padding: clamp(40px, 6vw, 84px) 0 clamp(96px, 12vw, 168px); }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -2;
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 70% at 72% 42%, #000 20%, transparent 78%);
+          mask-image: radial-gradient(ellipse 75% 70% at 72% 42%, #000 20%, transparent 78%); }
+.hero::after { content: ""; position: absolute; top: 0; right: 0; z-index: -1; width: min(48vw, 600px); height: 24px; background: linear-gradient(90deg, var(--orange-2), #e35d03); clip-path: polygon(0 0, 100% 0, 100% 100%); }
+.facets { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.facets i { display: none; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); align-items: center; gap: clamp(36px, 5vw, 72px); }
+.badge { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px 7px 11px; border-radius: 999px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); font: 600 .78rem/1.3 var(--font-tech); letter-spacing: .08em; text-transform: uppercase; color: #ffd3b1; }
+.badge .i { color: var(--orange-2); font-size: 1.35em; }
+.badge .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--orange-2); box-shadow: 0 0 0 0 rgba(251,136,36,.6); animation: pulse 2.4s ease-out infinite; flex: none; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(251,136,36,.55); } 70% { box-shadow: 0 0 0 10px rgba(251,136,36,0); } 100% { box-shadow: 0 0 0 0 rgba(251,136,36,0); } }
+.hero h1 { font-size: clamp(2.05rem, 1.15rem + 2.9vw, 3.4rem); line-height: 1.07; letter-spacing: -.022em; font-weight: 800; margin: 22px 0 20px; }
+.hl { position: relative; display: inline-block; color: var(--orange-2); }
+.hl svg { position: absolute; left: -1%; bottom: -.2em; width: 102%; height: .24em; overflow: visible; }
+.lead { font-size: clamp(1.05rem, 1rem + .35vw, 1.24rem); line-height: 1.55; color: rgba(255,255,255,.84); max-width: 30em; }
+.types { margin-top: 22px; }
+.types-label { font: 600 .74rem/1.3 var(--font-tech); letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 8px; }
+.types ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.types li { font: 600 .9rem/1.2 var(--font-tech); letter-spacing: .03em; padding: 8px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,.24); background: rgba(255,255,255,.07); }
+.cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 28px; }
+.micro { display: flex; align-items: center; gap: 8px; margin-top: 18px; font: 500 .86rem var(--font-tech); letter-spacing: .02em; color: rgba(255,255,255,.7); }
+.micro .i { color: var(--orange-2); font-size: 1.1em; }
+
+/* Entrada: a pergunta e os dois botões */
+.ask { margin: 30px 0 12px; font: 700 1.1rem/1.3 var(--font-display); text-wrap: balance; }
+.choices { display: grid; gap: 12px; max-width: 31rem; }
+.choice { display: grid; grid-template-columns: 52px 1fr 40px; align-items: center; gap: 14px; padding: 14px; border-radius: 18px; background: rgba(255,255,255,.07); border: 1.5px solid rgba(255,255,255,.2); color: #fff; text-decoration: none; transition: border-color .2s, background .2s, transform .2s; }
+.choice:hover { border-color: var(--orange-2); background: rgba(251,136,36,.12); transform: translateY(-2px); }
+.choice-ico { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: #fff; color: var(--navy); font-size: 26px; }
+.choice b { display: block; font: 700 1.15rem/1.2 var(--font-display); }
+.choice small { display: block; margin-top: 3px; font-size: .92rem; line-height: 1.35; color: rgba(255,255,255,.76); text-wrap: balance; }
+.choice .go { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(180deg, #fd9a3e, var(--orange)); color: var(--navy); font-size: 18px; transition: transform .2s; }
+.choice:hover .go { transform: translateX(3px); }
+
+/* Notebook + celular (medidas relativas, como no panfleto) */
+.devices { position: relative; container-type: inline-size; width: 100%; max-width: 640px; margin-inline: auto; aspect-ratio: 100 / 80; }
+/* Hexágono atrás dos aparelhos, como no verso do folheto: preenchimento bem leve, contorno fino e um eco maior */
+.devices .glow { position: absolute; left: -5cqw; top: -15cqw; width: 110cqw; aspect-ratio: 1; pointer-events: none; }
+.devices .glow::before, .devices .glow::after, .devices::before { content: ""; position: absolute; inset: 0; }
+.devices .glow::before { background: rgba(255,255,255,.055); clip-path: var(--hexa-g); }
+.devices .glow::after { background: rgba(255,255,255,.22); clip-path: var(--hexa-fio); }
+.devices::before { inset: auto; left: -10cqw; top: -20cqw; width: 120cqw; aspect-ratio: 1; background: rgba(255,255,255,.11); clip-path: var(--hexa-fio); pointer-events: none; }
+.laptop { position: absolute; left: 0; top: 0; width: 98.3cqw; aspect-ratio: 86 / 49.8; container-type: inline-size; }
+.laptop .floor { position: absolute; left: -4cqw; top: 54.5cqw; width: 108cqw; height: 8.5cqw; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,.6), rgba(0,0,0,0)); }
+.laptop .screen { position: absolute; left: 5.81cqw; top: 0; width: 88.37cqw; height: 53.72cqw; padding: 2.91cqw 2.33cqw 3.49cqw; border-radius: 3.26cqw 3.26cqw 1.16cqw 1.16cqw; background: linear-gradient(180deg, #2c323c 0%, #171b22 100%); box-shadow: inset 0 0 0 .35cqw #3e4551, 0 3.5cqw 10cqw rgba(0,0,0,.45); }
+.laptop .screen img { width: 100%; height: 100%; object-fit: cover; border-radius: .6cqw; }
+.laptop .cam { position: absolute; top: .99cqw; left: 50%; width: 1.05cqw; height: 1.05cqw; transform: translateX(-50%); border-radius: 50%; background: #0a0c10; box-shadow: 0 0 0 .17cqw #2c323c; }
+.laptop .glare { position: absolute; inset: 2.91cqw 2.33cqw 3.49cqw; border-radius: .6cqw; background: linear-gradient(118deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 38%); pointer-events: none; }
+.laptop .base { position: absolute; left: 0; top: 53.72cqw; width: 100cqw; height: 4.19cqw; border-radius: .58cqw .58cqw 3.72cqw 3.72cqw / .58cqw .58cqw 2.79cqw 2.79cqw; background: linear-gradient(180deg, #f3f5f8 0%, #d3d8df 35%, #a7aeb8 75%, #7d848f 100%); box-shadow: 0 1.4cqw 2.9cqw rgba(0,0,0,.45); }
+.laptop .notch { position: absolute; top: 0; left: 50%; width: 17.44cqw; height: 1.28cqw; transform: translateX(-50%); border-radius: 0 0 1.5cqw 1.5cqw; background: linear-gradient(180deg, #a3aab4, #c9ced6); }
+
+.phone-wrap { container-type: inline-size; }
+.phone-wrap .floor { position: absolute; left: -14cqw; top: 210cqw; width: 128cqw; height: 18cqw; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,0,0,.5), rgba(0,0,0,0)); }
+.phone { position: relative; width: 100cqw; aspect-ratio: 24 / 52.5; padding: 3.75cqw; border-radius: 16.7cqw; background: linear-gradient(150deg, #4a505a 0%, #22262d 40%, #121418 100%); box-shadow: inset 0 0 0 1.05cqw #5d646f, -6cqw 12cqw 28cqw rgba(0,0,0,.5); }
+.phone .screen { position: relative; width: 100%; height: 100%; border-radius: 13.3cqw; overflow: hidden; background: #fff; }
+.phone .screen img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.phone .glare { position: absolute; inset: 0; background: linear-gradient(125deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 35%); pointer-events: none; }
+.phone .key { position: absolute; width: 2.1cqw; background: #2a2f37; border-radius: 1.2cqw; }
+.phone .key.p { right: -1.5cqw; top: 22cqw; height: 23cqw; }
+.phone .key.v1 { left: -1.5cqw; top: 17cqw; height: 16.5cqw; }
+.phone .key.v2 { left: -1.5cqw; top: 37cqw; height: 16.5cqw; }
+.devices .phone-wrap { position: absolute; left: 72.6cqw; top: 14.9cqw; width: 27.4cqw; animation: float 6s ease-in-out infinite; }
+@keyframes float { 50% { translate: 0 -7px; } }
+.chip { position: absolute; z-index: 2; display: inline-flex; align-items: center; gap: .5em; padding: .55em .95em; border-radius: 999px; background: #fff; color: var(--ink); font: 600 clamp(10.5px, 2.3cqw, 14px)/1.2 var(--font-tech); letter-spacing: .02em; box-shadow: 0 8px 22px rgba(0,0,0,.28); white-space: nowrap; }
+.chip .i { color: var(--orange); font-size: 1.3em; }
+.chip-2d { left: 1.5cqw; top: 5cqw; }
+.chip-3d { right: 0; top: -3cqw; }
+
+.hero-cut { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: clamp(48px, 8vw, 112px); }
+
+/* Títulos de seção */
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; font: 600 .8rem/1.3 var(--font-tech); letter-spacing: .13em; text-transform: uppercase; color: var(--orange-ink); }
+.eyebrow::before { content: ""; flex: none; width: 13px; height: 13px; background: linear-gradient(150deg, var(--orange-2), var(--orange-deep)); clip-path: var(--hexa); }
+h2 { font-size: clamp(1.75rem, 1.1rem + 2.1vw, 2.6rem); line-height: 1.12; letter-spacing: -.016em; font-weight: 800; margin: 14px 0 16px; }
+.text-muted { color: var(--muted); max-width: 32em; font-size: 1.08rem; }
+
+/* Vídeo de demonstração */
+.demo { padding: clamp(40px, 6vw, 88px) 0 clamp(48px, 7vw, 96px); background: #fff; }
+.demo-head { margin-bottom: clamp(18px, 2.6vw, 30px); }
+.demo-head h2 { margin-bottom: 8px; }
+.riscado { position: relative; text-decoration: none; color: #7d8798; white-space: nowrap; }
+.riscado::after { content: ""; position: absolute; left: -3%; right: -3%; top: 52%; height: .11em; border-radius: 99px; background: linear-gradient(90deg, var(--orange-2), var(--orange-deep)); rotate: -3deg; }
+.demo-head h2 .facil { display: block; color: var(--orange-deep); }
+.player { position: relative; aspect-ratio: 16 / 9; border-radius: 20px; overflow: hidden; background: #0b172e; box-shadow: 0 50px 90px -45px rgba(13,24,45,.65); outline: 1px solid var(--line); }
+.player video { display: block; width: 100%; height: 100%; object-fit: cover; background: #0b172e; }
+.play { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: inline-flex; align-items: center; gap: 14px; padding: 10px 28px 10px 10px; border: 0; border-radius: 999px; background: rgba(13,24,45,.9); color: #fff; font: 700 1.08rem var(--font-display); cursor: pointer; box-shadow: 0 18px 40px rgba(0,0,0,.35); transition: transform .2s ease; }
+.play:hover { transform: translate(-50%, -50%) scale(1.04); }
+.play .go { display: grid; place-items: center; width: 58px; height: 58px; border-radius: 50%; background: linear-gradient(180deg, #fd9a3e, var(--orange)); color: var(--navy); font-size: 24px; }
+.play small { display: block; font: 500 .85rem var(--font-body); color: rgba(255,255,255,.7); text-align: left; }
+.player.tocando .play, .player.fim .play { display: none; }
+.fim-card { position: absolute; inset: 0; z-index: 2; display: grid; place-content: center; justify-items: center; gap: 8px; padding: 20px; text-align: center; color: #fff; background: rgba(9,18,36,.9); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); animation: m3d-troca .45s ease both; }
+.fim-t { font: 800 clamp(1.3rem, .8rem + 2vw, 2.2rem)/1.1 var(--font-display); letter-spacing: -.015em; }
+.fim-s { font-size: clamp(.92rem, .86rem + .3vw, 1.08rem); color: rgba(255,255,255,.8); }
+.fim-b { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 14px; }
+.fim-b .btn-ghost { gap: 8px; }
+.i-fill { fill: currentColor; stroke: none; }
+
+/* 3D interativo: palco escuro com o projeto, etapas embaixo */
+.m3d { padding: clamp(36px, 5vw, 68px) 0 clamp(4px, 1.4vw, 16px); background: #fff; }
+.m3d-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 10px 32px; margin-bottom: clamp(18px, 2.6vw, 28px); }
+.m3d-head h2 { margin-bottom: 0; }
+.m3d-head .text-muted { max-width: 21em; padding-bottom: 5px; }
+.m3d-stage { position: relative; isolation: isolate; aspect-ratio: 2 / 1; border-radius: 24px; overflow: hidden; background: radial-gradient(115% 90% at 50% 8%, #20427a 0%, #13284c 44%, #0a1529 100%); box-shadow: 0 50px 90px -45px rgba(13,24,45,.7); }
+.m3d-stage::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; height: 42%; background: linear-gradient(180deg, rgba(7,13,26,0), rgba(7,13,26,.62)); pointer-events: none; }
+.m3d-stage::after { content: ""; position: absolute; inset: 0; z-index: 3; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(255,255,255,.09), inset 0 1px 0 rgba(255,255,255,.16); pointer-events: none; }
+.m3d-poster { position: absolute; inset: 0; margin: 0; transition: opacity .7s ease .1s; }
+.m3d-poster img { width: 100%; height: 100%; object-fit: cover; }
+.m3d-canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; opacity: 0; transition: opacity .7s ease; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+.m3d-canvas:active { cursor: grabbing; }
+.m3d-canvas:focus-visible { outline-offset: -6px; border-radius: 22px; }
+.m3d.vivo .m3d-canvas { opacity: 1; }
+.m3d.vivo .m3d-poster { opacity: 0; }
+.m3d-hint { position: absolute; left: 50%; top: 16px; z-index: 2; translate: -50% 0; display: inline-flex; align-items: center; gap: 8px; margin: 0; padding: 8px 15px 8px 12px; border-radius: 999px; background: rgba(10,19,37,.62); border: 1px solid rgba(255,255,255,.18); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: #fff; font: 600 .76rem/1 var(--font-tech); letter-spacing: .09em; text-transform: uppercase; white-space: nowrap; pointer-events: none; opacity: 0; transition: opacity .45s ease; }
+.m3d-hint .i { color: var(--orange-2); font-size: 1.35em; animation: m3d-giro 3.4s ease-in-out infinite; }
+@keyframes m3d-giro { 50% { rotate: -50deg; } }
+.m3d.vivo .m3d-hint { opacity: 1; }
+.m3d.vivo.tocado .m3d-hint { opacity: 0; }
+.m3d-ctrl { position: absolute; right: 14px; top: 14px; z-index: 2; display: grid; gap: 8px; opacity: 0; transition: opacity .45s ease; }
+.m3d.vivo .m3d-ctrl { opacity: 1; }
+.m3d-ctrl button { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border-radius: 50%; border: 1px solid rgba(255,255,255,.22); background: rgba(10,19,37,.62); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); color: #fff; font-size: 19px; cursor: pointer; transition: background .2s, border-color .2s, color .2s; }
+.m3d-ctrl button:hover { background: var(--orange-2); border-color: transparent; color: var(--navy); }
+.m3d-ctrl .ic-play, .m3d-ctrl [aria-pressed="false"] .ic-pause { display: none; }
+.m3d-ctrl [aria-pressed="false"] .ic-play { display: block; }
+.m3d-cap { position: absolute; left: clamp(16px, 2.4vw, 30px); right: 76px; bottom: clamp(14px, 2.1vw, 26px); z-index: 2; margin: 0; color: #fff; pointer-events: none; }
+.m3d-cap b { display: block; font: 800 clamp(1.2rem, .95rem + 1vw, 1.8rem)/1.12 var(--font-display); letter-spacing: -.012em; }
+.m3d-cap span { display: block; margin-top: 4px; font-size: clamp(.9rem, .84rem + .25vw, 1.04rem); line-height: 1.4; color: rgba(255,255,255,.8); }
+.m3d-cap.troca { animation: m3d-troca .45s ease both; }
+@keyframes m3d-troca { from { opacity: 0; translate: 0 8px; } }
+.m3d-tabs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; margin-top: 14px; }
+.m3d-tab { position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 54px; padding: 10px 8px; border-radius: 14px; border: 1.5px solid var(--line); background: #fff; color: var(--ink); font: 600 .95rem/1.15 var(--font-body); cursor: pointer; transition: background .25s, color .25s, border-color .25s, transform .2s; }
+.m3d-tab .i { font-size: 20px; color: var(--muted); transition: color .25s; }
+.m3d-tab:hover { border-color: #aebbd0; transform: translateY(-1px); }
+.m3d-tab[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+.m3d-tab[aria-pressed="true"] .i { color: var(--orange-2); }
+.m3d-tab .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--orange-2), #e35d03); transform: scaleX(0); transform-origin: left center; }
+.m3d-note { margin-top: 12px; font-size: .9rem; color: var(--muted); }
+.m3d.sem3d .m3d-tabs, .m3d.sem3d .m3d-ctrl, .m3d.sem3d .m3d-hint, .m3d.sem3d .m3d-head .text-muted { display: none; }
+
+/* Três vantagens (engenheiros) */
+.perks { padding: clamp(20px, 3vw, 36px) 0 clamp(4px, 1vw, 12px); }
+.perks-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.perk { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: center; padding: 18px; border-radius: 18px; background: var(--mist); border: 1px solid var(--line); }
+.perk-ico { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: var(--navy); color: var(--orange-2); font-size: 25px; }
+.perk h3 { font-size: 1.1rem; line-height: 1.25; }
+.perk p { color: var(--muted); font-size: .96rem; line-height: 1.4; margin-top: 2px; }
+
+/* Trilho de cotas (etapas e fluxo da fábrica) */
+.flowbar { padding: clamp(20px, 3vw, 36px) 0 clamp(4px, 1vw, 12px); }
+.rail-list { list-style: none; position: relative; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 22px; }
+.rail-list::before { content: ""; position: absolute; left: 10%; right: 10%; top: 52px; height: 2px; background: #c9d2df; }
+.rail-list::after { content: ""; position: absolute; left: 10%; right: 10%; top: 44px; height: 18px; border-left: 2px solid #c9d2df; border-right: 2px solid #c9d2df; }
+.rail-item { position: relative; display: grid; justify-items: center; gap: 8px; width: 100%; padding: 0 4px; text-align: center; background: none; border: 0; font: inherit; color: inherit; }
+button.rail-item { cursor: pointer; }
+.rail-list .n { font: 700 .8rem/1 var(--font-tech); letter-spacing: .08em; color: var(--orange-ink); height: 16px; }
+.rail-list .node { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: #fff; border: 2px solid #c9d2df; color: var(--navy); font-size: 24px; transition: border-color .2s, color .2s, transform .2s; }
+button.rail-item:hover .node { border-color: var(--orange); color: var(--orange); transform: translateY(-2px); }
+.rail-list .t { font: 700 .98rem/1.2 var(--font-display); }
+.rail-list .short { display: none; }
+
+/* Etapas / blocos */
+.steps { background: var(--mist); padding: clamp(56px, 8vw, 110px) 0 clamp(40px, 6vw, 80px); }
+.steps-head { margin-bottom: clamp(8px, 1.5vw, 16px); }
+.steps-head h2 { margin-bottom: 0; }
+.steps .rail-list { margin: clamp(24px, 3vw, 36px) 0 clamp(16px, 2.5vw, 28px); }
+.step { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); grid-template-areas: "intro gal" "detail gal"; column-gap: clamp(28px, 5vw, 68px); row-gap: 22px; padding: clamp(36px, 5vw, 64px) 0; border-top: 1px solid var(--line); }
+.step:nth-of-type(even) { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); grid-template-areas: "gal intro" "gal detail"; }
+.step-intro { grid-area: intro; align-self: end; }
+.step-detail { grid-area: detail; align-self: start; }
+.step .gal { grid-area: gal; align-self: center; }
+.step-head { display: flex; align-items: flex-end; gap: 16px; }
+.step-n { font: 700 clamp(2.8rem, 2.1rem + 2vw, 3.8rem)/.85 var(--font-tech); color: var(--orange-deep); letter-spacing: -.03em; }
+.step-of { font: 600 .76rem/1.3 var(--font-tech); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+.step h3 { font-size: clamp(1.5rem, 1.15rem + 1.1vw, 2rem); line-height: 1.12; font-weight: 800; letter-spacing: -.012em; }
+.step-lead { margin-top: 14px; font-size: 1.1rem; color: var(--muted); max-width: 26em; }
+.checks { list-style: none; display: grid; gap: 10px; }
+.checks li { display: grid; grid-template-columns: 26px 1fr; gap: 10px; align-items: center; font-weight: 500; line-height: 1.4; }
+.ck { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: rgba(246,114,20,.14); color: var(--orange-deep); font-size: 14px; }
+.ck .i { stroke-width: 3; }
+
+/* Galeria: no computador, imagem grande + miniaturas; no celular, cartões que você arrasta para o lado */
+.gal { margin: 0; min-width: 0; }
+.gal-stage { position: relative; border: 1px solid var(--line); border-radius: 18px; background: #fff; overflow: hidden; box-shadow: 0 40px 70px -40px rgba(13,24,45,.5); }
+.gal-track { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.gal-track::-webkit-scrollbar { display: none; }
+.slide { flex: 0 0 100%; scroll-snap-align: start; padding: 0; border: 0; background: #fff; color: inherit; font: inherit; cursor: zoom-in; }
+.slide .pic { display: grid; place-items: center; aspect-ratio: 3 / 2; padding: 10px; }
+.slide .pic img { width: 100%; height: 100%; object-fit: contain; }
+.zoom-chip { position: absolute; right: 12px; bottom: 12px; display: inline-flex; align-items: center; gap: 6px; padding: 6px 11px; border-radius: 999px; background: rgba(13,24,45,.86); color: #fff; font: 600 .76rem var(--font-tech); letter-spacing: .04em; pointer-events: none; }
+.gal-stage:hover .zoom-chip { background: var(--orange); color: var(--navy); }
+.gal-nav { display: none; }
+.gal-cap { display: flex; align-items: baseline; gap: 10px; margin-top: 12px; font-size: .95rem; color: var(--muted); }
+.gal-cap::before { content: ""; width: 14px; height: 2px; background: var(--orange); flex: none; transform: translateY(-4px); }
+.gal-thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(66px, 1fr)); gap: 8px; margin-top: 12px; }
+.thumb { padding: 0; border: 2px solid transparent; border-radius: 10px; overflow: hidden; background: #fff; cursor: pointer; aspect-ratio: 4 / 3; box-shadow: 0 0 0 1px var(--line); transition: border-color .2s, transform .2s; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.thumb:hover { transform: translateY(-2px); }
+.thumb[aria-pressed="true"] { border-color: var(--orange); box-shadow: 0 0 0 4px rgba(246,114,20,.16); }
+
+/* Celulares lado a lado */
+.mobile { padding: clamp(56px, 8vw, 110px) 0; overflow: hidden; }
+.mobile-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 5vw, 72px); align-items: center; }
+.phones { display: flex; justify-content: center; gap: clamp(18px, 4vw, 40px); padding-bottom: 20px; }
+.phones figure { margin: 0; width: min(200px, 40vw); }
+.phones figure:nth-child(2) { margin-top: 56px; }
+.phones .phone-wrap { position: relative; }
+.phones figcaption { margin-top: 26px; text-align: center; font: 600 .82rem var(--font-tech); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.gal-phones { padding-top: 8px; }
+
+/* Oferta + formulário */
+.offer { position: relative; isolation: isolate; overflow: hidden; color: #fff; background: linear-gradient(160deg, #17325d 0%, #10223f 50%, #0b172e 100%); padding: clamp(56px, 8vw, 112px) 0; }
+.offer::before { content: ""; position: absolute; inset: 0; z-index: -2;
+  background-image: linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+  background-size: 120px 120px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 25% 40%, #000 15%, transparent 75%);
+          mask-image: radial-gradient(ellipse 70% 80% at 25% 40%, #000 15%, transparent 75%); }
+.corner { position: absolute; right: 0; bottom: 0; z-index: -1; width: min(46vw, 520px); height: min(30vw, 340px); pointer-events: none; }
+.corner i { position: absolute; aspect-ratio: 1; }
+.corner i:nth-child(1) { right: -15%; bottom: -62%; width: 62%; background: linear-gradient(140deg, #fd9a3e 0%, var(--orange) 52%, var(--orange-deep) 100%); clip-path: var(--hexa-g); }
+.corner i:nth-child(2) { right: -24%; bottom: -75.8%; width: 80%; background: rgba(255,255,255,.2); clip-path: var(--hexa-fio); }
+.offer-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .92fr); grid-template-areas: "intro card" "checks card"; column-gap: clamp(32px, 5vw, 72px); row-gap: 26px; align-items: start; }
+.offer-intro { grid-area: intro; align-self: end; }
+.offer-checks { grid-area: checks; }
+.offer .card { grid-area: card; align-self: center; }
+.offer-tag { display: inline-flex; align-items: center; gap: 6px 18px; flex-wrap: wrap; padding: 8px 14px; border-radius: 10px; background: rgba(251,136,36,.14); border: 1px solid rgba(251,136,36,.4); font: 600 .8rem/1.3 var(--font-tech); letter-spacing: .06em; text-transform: uppercase; color: #ffd3b1; }
+.offer-tag span { display: inline-flex; align-items: center; gap: 8px; }
+.offer-tag .i { color: var(--orange-2); font-size: 1.3em; }
+.offer h2 { color: #fff; }
+.offer .text { color: rgba(255,255,255,.8); max-width: 30em; font-size: 1.08rem; }
+.offer .checks li { color: #fff; }
+.offer .ck { background: rgba(251,136,36,.2); color: var(--orange-2); }
+
+.card { position: relative; background: #fff; color: var(--ink); border-radius: 22px; padding: clamp(22px, 3vw, 34px); box-shadow: 0 50px 90px -40px rgba(0,0,0,.7); }
+.card h3 { font-size: clamp(1.4rem, 1.15rem + .8vw, 1.75rem); line-height: 1.15; margin: 14px 0 6px; }
+.card .sub { color: var(--muted); font-size: .98rem; margin-bottom: 20px; }
+.field { display: grid; gap: 6px; margin-bottom: 14px; }
+.field label { font: 600 .92rem var(--font-body); }
+.field input { width: 100%; height: 54px; padding: 0 16px; border-radius: 12px; border: 1.5px solid #cdd5e1; background: #fbfcfe; font: 500 1.05rem var(--font-body); color: var(--ink); transition: border-color .2s, box-shadow .2s; }
+.field input::placeholder { color: #667289; }
+.field input:focus { outline: none; border-color: var(--orange); box-shadow: 0 0 0 4px rgba(246,114,20,.16); background: #fff; }
+.field input[aria-invalid="true"] { border-color: #c62828; }
+.erro { font-size: .86rem; color: #c62828; }
+.erro:empty { display: none; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.card .btn { margin-top: 6px; padding: 10px 10px 10px 24px; font-size: 1.05rem; justify-content: space-between; }
+.card .btn[disabled] { opacity: .7; cursor: wait; }
+.privacy { display: flex; gap: 8px; align-items: flex-start; margin-top: 14px; font-size: .84rem; line-height: 1.45; color: var(--muted); }
+.privacy .i { color: var(--orange-deep); font-size: 1.2em; margin-top: 1px; }
+.status { margin-top: 12px; font-size: .92rem; line-height: 1.45; border-radius: 10px; }
+.status:empty { display: none; }
+.status.info { padding: 12px 14px; background: #eef3fb; color: #1d3557; border: 1px solid #cddcf2; }
+.status.falha { padding: 12px 14px; background: #fdecec; color: #8e1c1c; border: 1px solid #f5c2c2; }
+.ok { text-align: center; padding: 10px 4px; }
+.ok-ico { display: inline-grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; background: rgba(246,114,20,.14); color: var(--orange); font-size: 34px; }
+.ok h3 { margin-top: 16px; }
+.ok p { color: var(--muted); margin-top: 8px; }
+.ok .btn { margin-top: 18px; text-decoration: none; }
+.ok .ok-tag { margin-top: 16px; font: 600 .76rem var(--font-tech); letter-spacing: .12em; text-transform: uppercase; color: var(--orange-ink); }
+
+/* Fecho da entrada: o acesso gratuito e a escolha do perfil */
+.escolha { padding: clamp(48px, 6.5vw, 92px) 0; }
+.escolha-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .92fr); align-items: center; gap: clamp(26px, 5vw, 72px); }
+.escolha h2 { margin-bottom: 0; }
+.escolha .ask { margin-top: 0; }
+.escolha .choices { max-width: none; }
+
+/* Movimento: a abertura entra em sequência; os blocos aparecem conforme a página rola */
+@keyframes sobe { from { opacity: 0; translate: 0 18px; } }
+.hero-grid > div:first-child > * { animation: sobe .7s cubic-bezier(.2,.7,.2,1) both; }
+.hero-grid > div:first-child > :nth-child(2) { animation-delay: .06s; }
+.hero-grid > div:first-child > :nth-child(3) { animation-delay: .12s; }
+.hero-grid > div:first-child > :nth-child(4) { animation-delay: .18s; }
+.hero-grid > div:first-child > :nth-child(5) { animation-delay: .24s; }
+.hero-grid > div:first-child > :nth-child(6) { animation-delay: .3s; }
+.hero .devices { animation: sobe .9s cubic-bezier(.2,.7,.2,1) .14s both; }
+.rv { opacity: 0; translate: 0 22px; transition: opacity .65s ease var(--rv, 0s), translate .65s cubic-bezier(.2,.7,.2,1) var(--rv, 0s); }
+.rv.on { opacity: 1; translate: none; }
+
+/* Dúvidas */
+.faq { background: var(--mist); padding: clamp(56px, 8vw, 100px) 0; }
+.faq-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.qa { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+.qa h3 { font-size: 1.08rem; line-height: 1.3; margin-bottom: 8px; }
+.qa p { color: var(--muted); font-size: 1rem; }
+
+/* Rodapé */
+.foot { padding: 36px 0 44px; border-top: 4px solid var(--orange); }
+.foot .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+.foot img { height: 64px; width: auto; }
+.foot p { font-size: .9rem; color: var(--muted); max-width: 40em; }
+
+/* Barra fixa no celular */
+.sticky-cta { display: none; }
+
+/* Ampliar imagem */
+.zoom { border: 0; padding: 0; background: transparent; max-width: min(1240px, 94vw); max-height: 94vh; overflow: visible; }
+.zoom::backdrop { background: rgba(6,11,22,.95); }
+html.travado { overflow: hidden; }
+.zoom figure { margin: 0; }
+.zoom-pan { border-radius: 12px; overflow: hidden; background: #fff; }
+.zoom img { max-width: 100%; max-height: 82vh; width: auto; height: auto; margin-inline: auto; }
+.zoom-hint { display: none; }
+.zoom figcaption { margin-top: 12px; text-align: center; color: #fff; font-size: .98rem; }
+.zoom-close { position: absolute; top: -14px; right: -14px; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 0; background: var(--orange); color: var(--navy); font-size: 22px; cursor: pointer; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+
+/* Detalhes do folheto: o hexágono da logo vira ícone, marcador e selo (os botões continuam redondos) */
+.choice-ico, .perk-ico, .ck, .ok-ico { border-radius: 0; clip-path: var(--hexa); }
+.rail-list .node { position: relative; border: 0; border-radius: 0; background: none; }
+.rail-list .node::before, .rail-list .node::after { content: ""; position: absolute; inset: 0; }
+.rail-list .node::before { inset: 3.5%; background: #fff; clip-path: var(--hexa); }
+.rail-list .node::after { background: #c9d2df; clip-path: var(--hexa-aro); transition: background .2s; }
+.rail-list .node .i { position: relative; z-index: 1; }
+button.rail-item:hover .node::after { background: var(--orange); }
+.selo { position: absolute; z-index: 1; top: -42px; right: clamp(16px, 3vw, 34px); width: 112px; aspect-ratio: 1; margin: 0; filter: drop-shadow(0 12px 12px rgba(9,18,36,.34)); pointer-events: none; }
+.selo > span { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; text-align: center; color: var(--navy); background: linear-gradient(140deg, #fd9a3e 0%, var(--orange) 52%, var(--orange-deep) 100%); clip-path: var(--hexa); }
+.selo .i { font-size: 23px; margin-bottom: 4px; }
+.selo b { font: 700 .76rem/1.06 var(--font-tech); letter-spacing: .07em; text-transform: uppercase; }
+.selo small { margin-top: 3px; font: 700 .56rem/1.15 var(--font-tech); letter-spacing: .08em; text-transform: uppercase; }
+.card form h3 { margin-top: 0; padding-right: 112px; }
+.card:has(#ok:not([hidden])) .selo { display: none; }
+@media (max-width: 980px) {
+  .devices .glow { left: -2cqw; top: -11cqw; width: 104cqw; }
+  .devices::before { display: none; }
+  .selo { top: -22px; }
+}
+@media (max-width: 640px) {
+  .selo { width: 94px; right: 14px; }
+  .selo .i { font-size: 19px; margin-bottom: 3px; }
+  .selo b { font-size: .66rem; }
+  .selo small { font-size: .5rem; }
+  .card form h3 { padding-right: 92px; }
+}
+
+/* Responsivo */
+@media (max-width: 980px) {
+  .hero-grid, .mobile-grid, .offer-grid, .escolha-grid { grid-template-columns: 1fr; }
+  .offer-grid { grid-template-areas: "intro" "card" "checks"; }
+  .devices { max-width: 560px; }
+  .step, .step:nth-of-type(even) { grid-template-columns: 1fr; grid-template-areas: "intro" "gal" "detail"; }
+  .perks-grid, .faq-grid { grid-template-columns: 1fr; }
+  .choices { max-width: none; }
+  .m3d-head { grid-template-columns: 1fr; }
+  .m3d-head .text-muted { max-width: 32em; padding-bottom: 0; }
+  .m3d-tab { flex-direction: column; gap: 5px; min-height: 64px; font-size: .88rem; }
+  .m3d-stage { aspect-ratio: 16 / 10; }
+}
+@media (max-width: 640px) {
+  .top .wrap { height: 64px; gap: 10px; }
+  .top .logo img { height: 42px; }
+  .top-cta { display: none; }
+  .switch a { padding: 7px 12px; font-size: .84rem; }
+  .switch .long { display: none; }
+  .switch .short { display: inline; }
+  .rail-list::before { top: 44px; } .rail-list::after { top: 37px; height: 16px; }
+  .rail-list .node { width: 42px; height: 42px; font-size: 19px; }
+  .rail-list .t { font-size: .72rem; }
+  .rail-list .n { font-size: .7rem; height: 14px; }
+  .rail-list .long { display: none; }
+  .rail-list .short { display: inline; }
+  .chip-2d { top: 3cqw; }
+  .zoom-close { top: -12px; right: -6px; }
+  .zoom.larga .zoom-pan { max-width: 94vw; overflow-x: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+  .zoom.larga img { max-width: none; max-height: none; width: auto; height: min(58vh, 460px); }
+  .zoom.larga .zoom-hint { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 10px; font: 600 .74rem/1 var(--font-tech); letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.72); }
+  .cta-row { flex-direction: column; gap: 10px; }
+  .cta-row .btn { width: 100%; }
+  .cta-row .btn-orange { justify-content: space-between; }
+  .step { row-gap: 18px; }
+  .play { padding: 6px; gap: 0; }
+  .play > span:last-child { display: none; }
+  .play .go { width: 60px; height: 60px; font-size: 24px; }
+  .fim-card { gap: 4px; padding: 10px; }
+  .fim-s { display: none; }
+  .fim-b { margin-top: 8px; gap: 8px; }
+  .fim-b .btn { padding: 7px 7px 7px 16px; font-size: .9rem; gap: 8px; }
+  .fim-b .btn-ghost { padding: 9px 14px; }
+  .fim-b .btn .arrow { width: 28px; height: 28px; font-size: 14px; }
+  .player { border-radius: 14px; }
+  .choice { grid-template-columns: 48px 1fr 36px; padding: 12px; }
+  .choice-ico { width: 48px; height: 48px; font-size: 24px; }
+  .choice .go { width: 36px; height: 36px; }
+  .m3d-stage { aspect-ratio: 10 / 11; border-radius: 18px; }
+  .m3d-canvas:focus-visible { border-radius: 16px; }
+  .m3d-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .m3d-ctrl { right: 10px; top: 10px; gap: 6px; }
+  .m3d-ctrl button { width: 40px; height: 40px; font-size: 17px; }
+  .m3d-hint { left: 10px; top: 14px; translate: none; padding: 7px 12px 7px 10px; font-size: .68rem; }
+  .m3d-cap { right: 16px; }
+
+  /* Galeria em cartões de arrastar */
+  .gal-stage { margin-inline: calc(-1 * var(--gutter)); border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: visible; }
+  .gal-track { gap: 12px; padding: 6px var(--gutter) 22px; scroll-padding-inline: var(--gutter); }
+  .gal-track::after { content: ""; flex: 0 0 1px; }
+  .slide { flex-basis: 86%; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 18px 32px -20px rgba(13,24,45,.5); }
+  .gal--single .slide { flex-basis: 100%; }
+  .zoom-chip, .gal-thumbs { display: none; }
+  .gal-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: -8px; }
+  .gal--single .gal-nav { display: none; }
+  .gal-dots { display: flex; align-items: center; gap: 6px; }
+  .gal-dots i { width: 7px; height: 7px; border-radius: 99px; background: #c5cfdc; transition: width .25s ease, background .25s ease; }
+  .gal-dots i.on { width: 22px; background: var(--orange); }
+  .gal-hint { display: inline-flex; align-items: center; gap: 6px; font: 600 .74rem/1 var(--font-tech); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  .gal-cap { margin-top: 10px; font-size: .9rem; }
+}
+@media (max-width: 359px) {
+  .top .logo img { height: 34px; }
+  .badge { font-size: .66rem; letter-spacing: .03em; padding-right: 11px; }
+  .switch a { padding: 7px 9px; font-size: .8rem; }
+  .m3d-tab { font-size: .8rem; padding-inline: 4px; }
+}
+@media (max-width: 760px) {
+  body { padding-bottom: 84px; }
+  .sticky-cta { display: block; position: fixed; z-index: 60; left: 0; right: 0; bottom: 0; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(13,24,45,.94); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transform: translateY(110%); visibility: hidden; transition: transform .3s ease, visibility 0s linear .3s; }
+  .sticky-cta.show { transform: translateY(0); visibility: visible; transition: transform .3s ease; }
+  .sticky-cta .btn { width: 100%; justify-content: space-between; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .rv { opacity: 1; translate: none; }
+}
+</style>
+</head>
+<body data-view="inicio">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="g-orange" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fb8824"/><stop offset="1" stop-color="#e35d03"/></linearGradient>
+  </defs>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></symbol>
+  <symbol id="i-escora" viewBox="0 0 24 24"><path d="M3 5h18v3H3z"/><path d="M6 8v12M12 8v12M18 8v12M4 20h4M10 20h4M16 20h4"/></symbol>
+  <symbol id="i-forma" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="1"/><path d="M3 12h18M8 6v12M16 6v12"/></symbol>
+  <symbol id="i-ferro" viewBox="0 0 24 24"><path d="M3 8h18M3 16h18M8 3v18M16 3v18"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/></symbol>
+  <symbol id="i-folders" viewBox="0 0 24 24"><path d="M20 5a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2.5a1.5 1.5 0 0 1 1.2.6l.6.8a1.5 1.5 0 0 0 1.2.6z"/><path d="M3 8.268a2 2 0 0 0-1 1.738V19a2 2 0 0 0 2 2h11a2 2 0 0 0 1.732-1"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+  <symbol id="i-compass" viewBox="0 0 24 24"><path d="m12.99 6.74 1.93 3.44"/><path d="M19.136 12a10 10 0 0 1-14.271 0"/><path d="m21 21-2.16-3.84"/><path d="m3 21 8.02-14.26"/><circle cx="12" cy="5" r="2"/></symbol>
+  <symbol id="i-factory" viewBox="0 0 24 24"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+  <symbol id="i-max" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="m21 3-7 7"/><path d="m3 21 7-7"/><path d="M9 21H3v-6"/></symbol>
+  <symbol id="i-badge" viewBox="0 0 24 24"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m16 9-5.5 5.5L8 12"/></symbol>
+  <symbol id="i-trelica" viewBox="0 0 24 24"><path d="M2 18h20"/><path d="M7.5 6h9"/><path d="m3 18 4.5-12L12 18l4.5-12L21 18"/></symbol>
+  <symbol id="i-laje" viewBox="0 0 24 24"><path d="M12 5.5 21 10l-9 4.5L3 10z"/><path d="M3 10v4l9 4.5 9-4.5v-4"/></symbol>
+  <symbol id="i-girar" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></symbol>
+  <symbol id="i-mais" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-menos" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio" aria-label="CADLAJE, voltar à entrada"><img src="img/logo-cadlaje.webp" alt="CADLAJE · Projeto e orçamento de lajes" width="900" height="347"></a>
+    <nav class="switch" aria-label="Escolha seu perfil">
+      <a href="#engenheiros" data-perfil="engenheiros"><span class="long">Engenheiros</span><span class="short">Engenheiro</span></a>
+      <a href="#fabricantes" data-perfil="fabricantes"><span class="long">Fabricantes</span><span class="short">Fabricante</span></a>
+    </nav>
+    <button class="btn btn-orange top-cta" type="button" data-ir="cadastro">Quero meu acesso <span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span></button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== ENTRADA ===================== -->
+  <div class="view" data-view="inicio">
+    <section class="hero" aria-labelledby="t-entrada">
+      <div class="facets" aria-hidden="true"><i></i><i></i></div>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="badge"><svg class="i" aria-hidden="true"><use href="#i-gift"/></svg>Brinde especial · Megaobra 2026</p>
+          <h1 id="t-entrada">Transforme horas de projeto em <span class="hl">minutos<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2,11.5 C50,4.5 120,1.5 198,3 C122,5.2 54,9.6 6,13.4 Z" fill="url(#g-orange)"/></svg></span></h1>
+          <p class="lead">Projeto e orçamento de lajes pré-moldadas, em um sistema fácil e intuitivo.</p>
+          <p class="ask">Você é engenheiro ou fabricante de lajes?</p>
+          <div class="choices">
+            <a class="choice" href="#engenheiros">
+              <span class="choice-ico"><svg class="i"><use href="#i-compass"/></svg></span>
+              <span><b>Sou engenheiro</b><small>Desenhos rápidos e quantitativo</small></span>
+              <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="choice" href="#fabricantes">
+              <span class="choice-ico"><svg class="i"><use href="#i-factory"/></svg></span>
+              <span><b>Sou fabricante de lajes</b><small>Do projeto à produção e às vendas</small></span>
+              <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+            </a>
+          </div>
+          <p class="micro"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg>Acesso gratuito para quem visitou a Megaobra</p>
+        </div>
+        <div class="devices" role="img" aria-label="O CADLAJE no notebook, com a paginação em 2D, e no celular, com a laje em 3D">
+          <div class="glow"></div>
+          <div class="laptop"><div class="floor"></div><div class="screen"><img src="img/11-planta-2d-paginacao.webp" alt="" width="1600" height="904"><span class="cam"></span><span class="glare"></span></div><div class="base"><span class="notch"></span></div></div>
+          <div class="phone-wrap"><div class="floor"></div><div class="phone"><div class="screen"><img src="img/13-celular-3d.webp" alt="" width="395" height="896"><span class="glare"></span></div><span class="key p"></span><span class="key v1"></span><span class="key v2"></span></div></div>
+          <span class="chip chip-2d"><svg class="i"><use href="#i-layers"/></svg>Planta 2D</span>
+          <span class="chip chip-3d"><svg class="i"><use href="#i-box"/></svg>3D no celular</span>
+        </div>
+      </div>
+      <svg class="hero-cut" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,10 100,10 100,3" fill="#ffffff"/><polygon points="45,6.85 100,3 100,0.4" fill="url(#g-orange)"/></svg>
+    </section>
+
+    <div class="modelo-slot">
+      <!-- Projeto em 3D para girar (o mesmo bloco é levado para a página escolhida) -->
+      <section class="m3d" id="modelo" aria-labelledby="t-modelo">
+        <div class="wrap">
+          <div class="m3d-head">
+            <div>
+              <p class="eyebrow">3D interativo</p>
+              <h2 id="t-modelo">Explore o projeto em 3D</h2>
+            </div>
+            <p class="text-muted">Arraste para girar e toque nas etapas para ver cada parte.</p>
+          </div>
+          <div class="m3d-stage">
+            <picture class="m3d-poster">
+              <source media="(max-width: 640px)" srcset="img/modelo-3d-capa-celular.webp" width="900" height="990">
+              <source media="(max-width: 980px)" srcset="img/modelo-3d-capa-tablet.webp" width="1280" height="800">
+              <img src="img/modelo-3d-capa.webp" alt="Projeto de laje em 3D com paredes, vigotas, enchimento, escoras, torres e fôrmas" width="1600" height="800" loading="lazy">
+            </picture>
+            <canvas class="m3d-canvas" tabindex="0" role="img" aria-label="Projeto de laje em 3D. Arraste para girar ou use as setas do teclado."></canvas>
+            <p class="m3d-hint" aria-hidden="true"><svg class="i"><use href="#i-girar"/></svg>Arraste para girar</p>
+            <div class="m3d-ctrl">
+              <button type="button" data-m3d="tour" aria-pressed="true" aria-label="Pausar a apresentação"><svg class="i i-fill ic-pause"><use href="#i-pause"/></svg><svg class="i i-fill ic-play"><use href="#i-play"/></svg></button>
+              <button type="button" data-m3d="mais" aria-label="Aproximar"><svg class="i"><use href="#i-mais"/></svg></button>
+              <button type="button" data-m3d="menos" aria-label="Afastar"><svg class="i"><use href="#i-menos"/></svg></button>
+            </div>
+            <p class="m3d-cap"><b>Projeto completo</b><span>Vigotas, enchimento, escoras e fôrmas</span></p>
+          </div>
+          <div class="m3d-tabs" role="group" aria-label="Ver cada parte do projeto">
+            <button class="m3d-tab" type="button" data-estado="completo" aria-pressed="true"><svg class="i"><use href="#i-layers"/></svg><span>Completo</span><i class="bar"></i></button>
+            <button class="m3d-tab" type="button" data-estado="vigotas" aria-pressed="false"><svg class="i"><use href="#i-trelica"/></svg><span>Vigotas</span><i class="bar"></i></button>
+            <button class="m3d-tab" type="button" data-estado="enchimento" aria-pressed="false"><svg class="i"><use href="#i-box"/></svg><span>Enchimento</span><i class="bar"></i></button>
+            <button class="m3d-tab" type="button" data-estado="escoras" aria-pressed="false"><svg class="i"><use href="#i-escora"/></svg><span>Escoras</span><i class="bar"></i></button>
+            <button class="m3d-tab" type="button" data-estado="formas" aria-pressed="false"><svg class="i"><use href="#i-forma"/></svg><span>Fôrmas</span><i class="bar"></i></button>
+            <button class="m3d-tab" type="button" data-estado="concreto" aria-pressed="false"><svg class="i"><use href="#i-laje"/></svg><span>Laje pronta</span><i class="bar"></i></button>
+          </div>
+          <p class="m3d-note">Projeto de exemplo feito no CADLAJE.</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="demo-slot">
+      <!-- Vídeo de demonstração (o mesmo bloco é levado para a página escolhida) -->
+      <section class="demo" id="demo" aria-labelledby="t-demo">
+        <div class="wrap">
+          <div class="demo-head">
+            <p class="eyebrow">Demonstração · 2 minutos</p>
+            <h2 id="t-demo">Chega de software <s class="riscado">complexo</s><span class="facil">Fácil e intuitivo.</span></h2>
+            <p class="text-muted">Veja o CADLAJE funcionando, do desenho 2D ao 3D.</p>
+          </div>
+          <div class="player">
+            <video id="demo-video" preload="none" playsinline poster="video/cadlaje-poster-v3.jpg" width="1280" height="720" aria-label="Demonstração do CADLAJE, com música">
+              <source src="video/cadlaje-demonstracao-v3.mp4" type="video/mp4">
+            </video>
+            <button class="play" type="button" aria-label="Assistir à demonstração do CADLAJE"><span class="go"><svg class="i i-fill"><use href="#i-play"/></svg></span><span>Assistir à demonstração<small>2 min</small></span></button>
+            <div class="fim-card" id="demo-fim" hidden>
+              <p class="fim-t">Agora é a sua vez.</p>
+              <p class="fim-s">Acesso gratuito para quem visitou a Megaobra.</p>
+              <div class="fim-b">
+                <button class="btn btn-orange" type="button" data-ir="cadastro">Quero meu acesso gratuito <span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span></button>
+                <button class="btn btn-ghost" type="button" id="demo-denovo"><svg class="i" aria-hidden="true"><use href="#i-girar"/></svg>Ver de novo</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Fecho da entrada: o acesso gratuito e a escolha do perfil (leva direto ao cadastro) -->
+    <section class="offer escolha" id="escolha" aria-labelledby="t-escolha">
+      <div class="wrap escolha-grid">
+        <div>
+          <p class="offer-tag"><span><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg>Megaobra 2026 · 24 a 26 de novembro</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Expominas, BH</span></p>
+          <h2 id="t-escolha">Acesso gratuito para quem visitou a Megaobra</h2>
+        </div>
+        <div>
+          <p class="ask">Você é engenheiro ou fabricante de lajes?</p>
+          <div class="choices">
+            <a class="choice" href="#engenheiros" data-cadastro>
+              <span class="choice-ico"><svg class="i"><use href="#i-compass"/></svg></span>
+              <span><b>Sou engenheiro</b><small>Cadastro com nome, telefone e CREA</small></span>
+              <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+            </a>
+            <a class="choice" href="#fabricantes" data-cadastro>
+              <span class="choice-ico"><svg class="i"><use href="#i-factory"/></svg></span>
+              <span><b>Sou fabricante de lajes</b><small>Cadastro com nome, telefone e fábrica</small></span>
+              <span class="go"><svg class="i"><use href="#i-arrow"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== ENGENHEIROS ===================== -->
+  <div class="view" data-view="engenheiros" hidden>
+    <section class="hero" aria-labelledby="t-eng">
+      <div class="facets" aria-hidden="true"><i></i><i></i></div>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="badge"><span class="dot" aria-hidden="true"></span>Para engenheiros · Megaobra 2026</p>
+          <h1 id="t-eng">Do desenho ao quantitativo em <span class="hl">minutos<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2,11.5 C50,4.5 120,1.5 198,3 C122,5.2 54,9.6 6,13.4 Z" fill="url(#g-orange)"/></svg></span></h1>
+          <p class="lead">Desenhe qualquer laje e tenha a planta, o detalhamento e a lista de materiais na hora.</p>
+          <div class="types">
+            <p class="types-label">Todos os tipos de laje</p>
+            <ul><li>Treliçadas</li><li>Protendidas</li><li>Painéis</li></ul>
+          </div>
+          <div class="cta-row">
+            <button class="btn btn-orange" type="button" data-ir="cadastro" data-hero-cta>Quero meu acesso gratuito <span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span></button>
+            <button class="btn btn-ghost" type="button" data-ir="modelo">Ver o projeto em 3D</button>
+          </div>
+        </div>
+        <div class="devices" role="img" aria-label="O CADLAJE no notebook, com a paginação em 2D, e no celular, com a laje em 3D">
+          <div class="glow"></div>
+          <div class="laptop"><div class="floor"></div><div class="screen"><img src="img/11-planta-2d-paginacao.webp" alt="" width="1600" height="904"><span class="cam"></span><span class="glare"></span></div><div class="base"><span class="notch"></span></div></div>
+          <div class="phone-wrap"><div class="floor"></div><div class="phone"><div class="screen"><img src="img/13-celular-3d.webp" alt="" width="395" height="896"><span class="glare"></span></div><span class="key p"></span><span class="key v1"></span><span class="key v2"></span></div></div>
+          <span class="chip chip-2d"><svg class="i"><use href="#i-layers"/></svg>Planta 2D</span>
+          <span class="chip chip-3d"><svg class="i"><use href="#i-box"/></svg>3D no celular</span>
+        </div>
+      </div>
+      <svg class="hero-cut" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,10 100,10 100,3" fill="#ffffff"/><polygon points="45,6.85 100,3 100,0.4" fill="url(#g-orange)"/></svg>
+    </section>
+
+    <section class="perks" aria-label="Vantagens para engenheiros">
+      <div class="wrap perks-grid">
+        <div class="perk"><span class="perk-ico"><svg class="i"><use href="#i-zap"/></svg></span><div><h3>Desenho rápido</h3><p>Treliçadas, protendidas e painéis.</p></div></div>
+        <div class="perk"><span class="perk-ico"><svg class="i"><use href="#i-clip"/></svg></span><div><h3>Quantitativo automático</h3><p>Vigotas, escoras, fôrmas, aço e concreto.</p></div></div>
+        <div class="perk"><span class="perk-ico"><svg class="i"><use href="#i-folders"/></svg></span><div><h3>Projetos organizados</h3><p>Todos os seus projetos em um só lugar.</p></div></div>
+      </div>
+    </section>
+
+    <div class="modelo-slot"></div>
+    <div class="demo-slot"></div>
+
+    <section class="steps" id="etapas" aria-labelledby="t-etapas">
+      <div class="wrap">
+        <div class="steps-head">
+          <p class="eyebrow">As etapas do projeto</p>
+          <h2 id="t-etapas">O que sai do seu desenho</h2>
+        </div>
+        <ol class="rail-list">
+          <li><button class="rail-item" type="button" data-ir="paginacao"><span class="n">01</span><span class="node"><svg class="i"><use href="#i-layers"/></svg></span><span class="t">Paginação</span></button></li>
+          <li><button class="rail-item" type="button" data-ir="escoramento"><span class="n">02</span><span class="node"><svg class="i"><use href="#i-escora"/></svg></span><span class="t">Escora<span class="long">mento</span><span class="short">s</span></span></button></li>
+          <li><button class="rail-item" type="button" data-ir="formas"><span class="n">03</span><span class="node"><svg class="i"><use href="#i-forma"/></svg></span><span class="t">Fôrmas</span></button></li>
+          <li><button class="rail-item" type="button" data-ir="ferragem"><span class="n">04</span><span class="node"><svg class="i"><use href="#i-ferro"/></svg></span><span class="t">Ferragem</span></button></li>
+          <li><button class="rail-item" type="button" data-ir="concreto"><span class="n">05</span><span class="node"><svg class="i"><use href="#i-box"/></svg></span><span class="t">Concreto</span></button></li>
+        </ol>
+
+        <!-- 01 Paginação -->
+        <article class="step" id="paginacao" aria-labelledby="t-pag">
+          <div class="step-intro">
+            <div class="step-head"><span class="step-n">01</span><div><p class="step-of">Etapa 1 de 5</p><h3 id="t-pag">Paginação da laje</h3></div></div>
+            <p class="step-lead">Escolha o tipo de laje e o CADLAJE distribui vigotas e enchimento.</p>
+          </div>
+          <ul class="checks step-detail">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Vigotas e enchimento em 2D e 3D</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Carga, altura e pé-direito por laje</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Medidas e área na hora</li>
+          </ul>
+          <figure class="gal">
+            <div class="gal-stage">
+              <div class="gal-track" tabindex="0" aria-label="Imagens da paginação">
+                <button class="slide" type="button"><span class="pic"><img src="img/08-laje-paginada-3d.webp" alt="Laje paginada em 3D com vigotas, enchimento e paredes" width="1018" height="950" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/09-vigotas-3d.webp" alt="Só as vigotas, sem o enchimento" width="1026" height="962" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/10-vigotas-escoras-3d.webp" alt="Vigotas e escoras vistas de perto" width="1600" height="981" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img data-pan="centro" src="img/12-planta-2d-comodo.webp" alt="Planta 2D com a laje selecionada e as medidas" width="1600" height="900" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img data-pan="centro" src="img/11-planta-2d-paginacao.webp" alt="Planta 2D da paginação com a caixa d'água" width="1600" height="904" loading="lazy"></span></button>
+              </div>
+              <span class="zoom-chip" aria-hidden="true"><svg class="i"><use href="#i-max"/></svg>Ampliar</span>
+            </div>
+            <div class="gal-nav" aria-hidden="true"><span class="gal-dots"></span><span class="gal-hint">Arraste para o lado <svg class="i"><use href="#i-arrow"/></svg></span></div>
+            <figcaption class="gal-cap"><span>Laje paginada em 3D com vigotas, enchimento e paredes</span></figcaption>
+            <div class="gal-thumbs" role="group" aria-label="Escolher imagem da paginação">
+              <button class="thumb" type="button" aria-label="Ver imagem 1"><img src="img/08-laje-paginada-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 2"><img src="img/09-vigotas-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 3"><img src="img/10-vigotas-escoras-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 4"><img src="img/12-planta-2d-comodo-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 5"><img src="img/11-planta-2d-paginacao-mini.webp" alt="" loading="lazy"></button>
+            </div>
+          </figure>
+        </article>
+
+        <!-- 02 Escoramento -->
+        <article class="step" id="escoramento" aria-labelledby="t-esc">
+          <div class="step-intro">
+            <div class="step-head"><span class="step-n">02</span><div><p class="step-of">Etapa 2 de 5</p><h3 id="t-esc">Escoramento</h3></div></div>
+            <p class="step-lead">Escoras e torres na planta, com a lista do que comprar.</p>
+          </div>
+          <ul class="checks step-detail">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Postes, torres, longarinas e barrotes</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Peças de cada torre para compra</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Detalhe da torre com medidas</li>
+          </ul>
+          <figure class="gal">
+            <div class="gal-stage">
+              <div class="gal-track" tabindex="0" aria-label="Imagens do escoramento">
+                <button class="slide" type="button"><span class="pic"><img src="img/02-laje-escoras-torre-3d.webp" alt="Laje com escoras metálicas e torre de escoramento em 3D" width="1012" height="950" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/01-torres-escoramento-3d.webp" alt="Topo das torres com longarinas e barrotes" width="1500" height="933" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/03-torre-laje-3d-de-baixo.webp" alt="Torre sob a laje, vista de baixo para cima" width="1442" height="978" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img data-pan="centro" src="img/05-planta-2d-escoramento.webp" alt="Planta 2D do escoramento com postes, torres e longarinas" width="1600" height="900" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img data-pan="inicio" src="img/06-pecas-torre-escoramento.webp" alt="Lista de compra das peças da torre, com medidas e quantidades" width="1019" height="555" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/07-detalhe-torre-medidas.webp" alt="Detalhe da torre com as medidas, em duas vistas" width="1076" height="896" loading="lazy"></span></button>
+              </div>
+              <span class="zoom-chip" aria-hidden="true"><svg class="i"><use href="#i-max"/></svg>Ampliar</span>
+            </div>
+            <div class="gal-nav" aria-hidden="true"><span class="gal-dots"></span><span class="gal-hint">Arraste para o lado <svg class="i"><use href="#i-arrow"/></svg></span></div>
+            <figcaption class="gal-cap"><span>Laje com escoras metálicas e torre de escoramento em 3D</span></figcaption>
+            <div class="gal-thumbs" role="group" aria-label="Escolher imagem do escoramento">
+              <button class="thumb" type="button" aria-label="Ver imagem 1"><img src="img/02-laje-escoras-torre-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 2"><img src="img/01-torres-escoramento-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 3"><img src="img/03-torre-laje-3d-de-baixo-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 4"><img src="img/05-planta-2d-escoramento-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 5"><img src="img/06-pecas-torre-escoramento-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 6"><img src="img/07-detalhe-torre-medidas-mini.webp" alt="" loading="lazy"></button>
+            </div>
+          </figure>
+        </article>
+
+        <!-- 03 Fôrmas -->
+        <article class="step" id="formas" aria-labelledby="t-for">
+          <div class="step-intro">
+            <div class="step-head"><span class="step-n">03</span><div><p class="step-of">Etapa 3 de 5</p><h3 id="t-for">Fôrmas de madeira</h3></div></div>
+            <p class="step-lead">O fechamento em madeira sai detalhado, peça por peça.</p>
+          </div>
+          <ul class="checks step-detail">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Tábuas, sarrafos, beirais e vigas</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Total de peças e metragem</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Fôrmas em 3D com a laje</li>
+          </ul>
+          <figure class="gal">
+            <div class="gal-stage">
+              <div class="gal-track" tabindex="0" aria-label="Imagens das fôrmas">
+                <button class="slide" type="button"><span class="pic"><img src="img/15-formas-3d.webp" alt="Fôrmas de madeira de fechamento com a laje paginada" width="1077" height="951" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/18-formas-escoramento-3d.webp" alt="Fôrmas com o escoramento, vista de baixo" width="1464" height="963" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/17-formas-3d-de-cima.webp" alt="Fôrmas vistas de perto, de cima" width="1408" height="803" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/16-formas-3d-de-baixo.webp" alt="Fôrmas em perspectiva de baixo" width="1381" height="938" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img data-pan="inicio" src="img/19-detalhe-formas.webp" alt="Detalhamento das fôrmas de madeira, com peças e medidas" width="1600" height="356" loading="lazy"></span></button>
+              </div>
+              <span class="zoom-chip" aria-hidden="true"><svg class="i"><use href="#i-max"/></svg>Ampliar</span>
+            </div>
+            <div class="gal-nav" aria-hidden="true"><span class="gal-dots"></span><span class="gal-hint">Arraste para o lado <svg class="i"><use href="#i-arrow"/></svg></span></div>
+            <figcaption class="gal-cap"><span>Fôrmas de madeira de fechamento com a laje paginada</span></figcaption>
+            <div class="gal-thumbs" role="group" aria-label="Escolher imagem das fôrmas">
+              <button class="thumb" type="button" aria-label="Ver imagem 1"><img src="img/15-formas-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 2"><img src="img/18-formas-escoramento-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 3"><img src="img/17-formas-3d-de-cima-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 4"><img src="img/16-formas-3d-de-baixo-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 5"><img src="img/19-detalhe-formas-mini.webp" alt="" loading="lazy"></button>
+            </div>
+          </figure>
+        </article>
+
+        <!-- 04 Ferragem -->
+        <article class="step" id="ferragem" aria-labelledby="t-fer">
+          <div class="step-intro">
+            <div class="step-head"><span class="step-n">04</span><div><p class="step-of">Etapa 4 de 5</p><h3 id="t-fer">Ferragem</h3></div></div>
+            <p class="step-lead">Negativos e tela lançados na planta, com o peso do aço.</p>
+          </div>
+          <ul class="checks step-detail">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Continuidade, borda e balanço</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Tela de distribuição e nervuras</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Relatório com tabela de aço</li>
+          </ul>
+          <figure class="gal">
+            <div class="gal-stage">
+              <div class="gal-track" tabindex="0" aria-label="Imagens da ferragem">
+                <button class="slide" type="button"><span class="pic"><img src="img/21-ferragem-3d.webp" alt="Ferragem em 3D, com o balanço em vermelho" width="1552" height="984" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/22-ferragem-3d-aproximada.webp" alt="Ferragem de balanço vista de perto" width="1600" height="980" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img data-pan="centro" src="img/20-planta-2d-ferragem.webp" alt="Planta 2D da ferragem com barras e tela" width="1600" height="900" loading="lazy"></span></button>
+              </div>
+              <span class="zoom-chip" aria-hidden="true"><svg class="i"><use href="#i-max"/></svg>Ampliar</span>
+            </div>
+            <div class="gal-nav" aria-hidden="true"><span class="gal-dots"></span><span class="gal-hint">Arraste para o lado <svg class="i"><use href="#i-arrow"/></svg></span></div>
+            <figcaption class="gal-cap"><span>Ferragem em 3D, com o balanço em vermelho</span></figcaption>
+            <div class="gal-thumbs" role="group" aria-label="Escolher imagem da ferragem">
+              <button class="thumb" type="button" aria-label="Ver imagem 1"><img src="img/21-ferragem-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 2"><img src="img/22-ferragem-3d-aproximada-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 3"><img src="img/20-planta-2d-ferragem-mini.webp" alt="" loading="lazy"></button>
+            </div>
+          </figure>
+        </article>
+
+        <!-- 05 Concreto -->
+        <article class="step" id="concreto" aria-labelledby="t-con">
+          <div class="step-intro">
+            <div class="step-head"><span class="step-n">05</span><div><p class="step-of">Etapa 5 de 5</p><h3 id="t-con">Concreto</h3></div></div>
+            <p class="step-lead">A laje pronta em 3D, com o volume de concreto da obra.</p>
+          </div>
+          <ul class="checks step-detail">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Laje concretada em 3D</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Volume de concreto</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Quantidades prontas para o orçamento</li>
+          </ul>
+          <figure class="gal gal--single">
+            <div class="gal-stage">
+              <div class="gal-track" tabindex="0" aria-label="Imagem do concreto">
+                <button class="slide" type="button"><span class="pic"><img src="img/23-laje-concretada-3d.webp" alt="Laje concretada em 3D" width="1041" height="928" loading="lazy"></span></button>
+              </div>
+              <span class="zoom-chip" aria-hidden="true"><svg class="i"><use href="#i-max"/></svg>Ampliar</span>
+            </div>
+            <figcaption class="gal-cap"><span>Laje concretada em 3D</span></figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="mobile" aria-labelledby="t-cel">
+      <div class="wrap mobile-grid">
+        <div>
+          <p class="eyebrow">No celular</p>
+          <h2 id="t-cel">O projeto na palma da mão</h2>
+          <p class="text-muted">Confira a planta em 2D e gire a laje em 3D, no escritório ou na obra.</p>
+        </div>
+        <div class="phones">
+          <figure>
+            <div class="phone-wrap"><div class="floor"></div><div class="phone"><div class="screen"><img src="img/14-celular-2d.webp" alt="Tela do celular com a planta 2D da paginação e as opções da laje" width="394" height="896" loading="lazy"><span class="glare"></span></div><span class="key p"></span><span class="key v1"></span><span class="key v2"></span></div></div>
+            <figcaption>Planta 2D</figcaption>
+          </figure>
+          <figure>
+            <div class="phone-wrap"><div class="floor"></div><div class="phone"><div class="screen"><img src="img/13-celular-3d.webp" alt="Tela do celular com a laje em 3D" width="395" height="896" loading="lazy"><span class="glare"></span></div><span class="key p"></span><span class="key v1"></span><span class="key v2"></span></div></div>
+            <figcaption>Laje em 3D</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== FABRICANTES ===================== -->
+  <div class="view" data-view="fabricantes" hidden>
+    <section class="hero" aria-labelledby="t-fab">
+      <div class="facets" aria-hidden="true"><i></i><i></i></div>
+      <div class="wrap hero-grid">
+        <div>
+          <p class="badge"><span class="dot" aria-hidden="true"></span>Para fabricantes · Megaobra 2026</p>
+          <h1 id="t-fab">Do projeto à ordem de produção em <span class="hl">minutos<svg viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2,11.5 C50,4.5 120,1.5 198,3 C122,5.2 54,9.6 6,13.4 Z" fill="url(#g-orange)"/></svg></span></h1>
+          <p class="lead">Faça o projeto e o CADLAJE gera os cálculos, a proposta, o pedido e tudo o que a produção precisa.</p>
+          <div class="types">
+            <p class="types-label">Todos os tipos de laje</p>
+            <ul><li>Treliçadas</li><li>Protendidas</li><li>Painéis</li></ul>
+          </div>
+          <div class="cta-row">
+            <button class="btn btn-orange" type="button" data-ir="cadastro" data-hero-cta>Quero meu acesso gratuito <span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span></button>
+            <button class="btn btn-ghost" type="button" data-ir="modulo">Ver o módulo da fábrica</button>
+          </div>
+        </div>
+        <div class="devices" role="img" aria-label="O CADLAJE no notebook, com a paginação da laje, e no celular, com a laje em 3D">
+          <div class="glow"></div>
+          <div class="laptop"><div class="floor"></div><div class="screen"><img src="img/12-planta-2d-comodo.webp" alt="" width="1600" height="900"><span class="cam"></span><span class="glare"></span></div><div class="base"><span class="notch"></span></div></div>
+          <div class="phone-wrap"><div class="floor"></div><div class="phone"><div class="screen"><img src="img/13-celular-3d.webp" alt="" width="395" height="896"><span class="glare"></span></div><span class="key p"></span><span class="key v1"></span><span class="key v2"></span></div></div>
+          <span class="chip chip-2d"><svg class="i"><use href="#i-layers"/></svg>Paginação 2D</span>
+          <span class="chip chip-3d"><svg class="i"><use href="#i-box"/></svg>3D no celular</span>
+        </div>
+      </div>
+      <svg class="hero-cut" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,10 100,10 100,3" fill="#ffffff"/><polygon points="45,6.85 100,3 100,0.4" fill="url(#g-orange)"/></svg>
+    </section>
+
+    <section class="flowbar" aria-label="Fluxo da fábrica">
+      <div class="wrap">
+        <p class="eyebrow">Tudo ligado ao mesmo projeto</p>
+        <ol class="rail-list">
+          <li><div class="rail-item"><span class="n">01</span><span class="node"><svg class="i"><use href="#i-compass"/></svg></span><span class="t">Projeto</span></div></li>
+          <li><div class="rail-item"><span class="n">02</span><span class="node"><svg class="i"><use href="#i-doc"/></svg></span><span class="t">Proposta</span></div></li>
+          <li><div class="rail-item"><span class="n">03</span><span class="node"><svg class="i"><use href="#i-clip"/></svg></span><span class="t">Pedido</span></div></li>
+          <li><div class="rail-item"><span class="n">04</span><span class="node"><svg class="i"><use href="#i-factory"/></svg></span><span class="t">Produção</span></div></li>
+          <li><div class="rail-item"><span class="n">05</span><span class="node"><svg class="i"><use href="#i-truck"/></svg></span><span class="t">Entrega</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <div class="modelo-slot"></div>
+    <div class="demo-slot"></div>
+
+    <section class="steps" id="modulo" aria-labelledby="t-modulo">
+      <div class="wrap">
+        <div class="steps-head">
+          <p class="eyebrow">O módulo da fábrica</p>
+          <h2 id="t-modulo">Do projeto à entrega, no mesmo sistema</h2>
+        </div>
+
+        <!-- 01 Projeto -->
+        <article class="step" id="fab-projeto" aria-labelledby="t-fp1">
+          <div class="step-intro">
+            <div class="step-head"><span class="step-n">01</span><div><p class="step-of">Projeto</p><h3 id="t-fp1">Projetos completos para o cliente</h3></div></div>
+            <p class="step-lead">Todos os tipos de laje, com os cálculos feitos pelo sistema.</p>
+          </div>
+          <ul class="checks step-detail">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Projeto de montagem para o cliente</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Escoramento e fôrmas detalhados</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Ferragem e concreto calculados</li>
+          </ul>
+          <figure class="gal">
+            <div class="gal-stage">
+              <div class="gal-track" tabindex="0" aria-label="Imagens do projeto">
+                <button class="slide" type="button"><span class="pic"><img src="img/08-laje-paginada-3d.webp" alt="Laje paginada em 3D com vigotas, enchimento e paredes" width="1018" height="950" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/02-laje-escoras-torre-3d.webp" alt="Escoras metálicas e torre de escoramento em 3D" width="1012" height="950" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/15-formas-3d.webp" alt="Fôrmas de madeira de fechamento" width="1077" height="951" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/21-ferragem-3d.webp" alt="Ferragem em 3D, com o balanço em vermelho" width="1552" height="984" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/23-laje-concretada-3d.webp" alt="Laje concretada em 3D" width="1041" height="928" loading="lazy"></span></button>
+              </div>
+              <span class="zoom-chip" aria-hidden="true"><svg class="i"><use href="#i-max"/></svg>Ampliar</span>
+            </div>
+            <div class="gal-nav" aria-hidden="true"><span class="gal-dots"></span><span class="gal-hint">Arraste para o lado <svg class="i"><use href="#i-arrow"/></svg></span></div>
+            <figcaption class="gal-cap"><span>Laje paginada em 3D com vigotas, enchimento e paredes</span></figcaption>
+            <div class="gal-thumbs" role="group" aria-label="Escolher imagem do projeto">
+              <button class="thumb" type="button" aria-label="Ver imagem 1"><img src="img/08-laje-paginada-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 2"><img src="img/02-laje-escoras-torre-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 3"><img src="img/15-formas-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 4"><img src="img/21-ferragem-3d-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 5"><img src="img/23-laje-concretada-3d-mini.webp" alt="" loading="lazy"></button>
+            </div>
+          </figure>
+        </article>
+
+        <!-- 02 Produção -->
+        <article class="step" id="fab-producao" aria-labelledby="t-fp2">
+          <div class="step-intro">
+            <div class="step-head"><span class="step-n">02</span><div><p class="step-of">Produção</p><h3 id="t-fp2">Tudo pronto para produzir</h3></div></div>
+            <p class="step-lead">Do projeto, já saem os documentos da produção.</p>
+          </div>
+          <ul class="checks step-detail">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Ordem de produção e detalhamentos</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Lista de compra</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Etiquetas e comandas de entrega</li>
+          </ul>
+          <figure class="gal">
+            <div class="gal-stage">
+              <div class="gal-track" tabindex="0" aria-label="Imagens dos detalhamentos">
+                <button class="slide" type="button"><span class="pic"><img data-pan="inicio" src="img/06-pecas-torre-escoramento.webp" alt="Lista de compra das peças da torre, com medidas e quantidades" width="1019" height="555" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img data-pan="inicio" src="img/19-detalhe-formas.webp" alt="Detalhamento das fôrmas de madeira, com peças e medidas" width="1600" height="356" loading="lazy"></span></button>
+                <button class="slide" type="button"><span class="pic"><img src="img/07-detalhe-torre-medidas.webp" alt="Detalhe da torre com as medidas, em duas vistas" width="1076" height="896" loading="lazy"></span></button>
+              </div>
+              <span class="zoom-chip" aria-hidden="true"><svg class="i"><use href="#i-max"/></svg>Ampliar</span>
+            </div>
+            <div class="gal-nav" aria-hidden="true"><span class="gal-dots"></span><span class="gal-hint">Arraste para o lado <svg class="i"><use href="#i-arrow"/></svg></span></div>
+            <figcaption class="gal-cap"><span>Lista de compra das peças da torre, com medidas e quantidades</span></figcaption>
+            <div class="gal-thumbs" role="group" aria-label="Escolher imagem dos detalhamentos">
+              <button class="thumb" type="button" aria-label="Ver imagem 1"><img src="img/06-pecas-torre-escoramento-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 2"><img src="img/19-detalhe-formas-mini.webp" alt="" loading="lazy"></button>
+              <button class="thumb" type="button" aria-label="Ver imagem 3"><img src="img/07-detalhe-torre-medidas-mini.webp" alt="" loading="lazy"></button>
+            </div>
+          </figure>
+        </article>
+
+        <!-- 03 Comercial -->
+        <article class="step" id="fab-comercial" aria-labelledby="t-fp3">
+          <div class="step-intro">
+            <div class="step-head"><span class="step-n">03</span><div><p class="step-of">Comercial e financeiro</p><h3 id="t-fp3">Vendas e financeiro sob controle</h3></div></div>
+            <p class="step-lead">Acompanhe o comercial e os projetos da fábrica em um só lugar.</p>
+          </div>
+          <ul class="checks step-detail">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Proposta e pedido para o cliente</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Vendas de cada vendedor</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Controle financeiro</li>
+          </ul>
+          <figure class="gal gal-phones">
+            <div class="phones">
+              <figure>
+                <div class="phone-wrap"><div class="floor"></div><div class="phone"><div class="screen"><img src="img/14-celular-2d.webp" alt="Tela do celular com a planta 2D da laje" width="394" height="896" loading="lazy"><span class="glare"></span></div><span class="key p"></span><span class="key v1"></span><span class="key v2"></span></div></div>
+                <figcaption>Planta 2D</figcaption>
+              </figure>
+              <figure>
+                <div class="phone-wrap"><div class="floor"></div><div class="phone"><div class="screen"><img src="img/13-celular-3d.webp" alt="Tela do celular com a laje em 3D" width="395" height="896" loading="lazy"><span class="glare"></span></div><span class="key p"></span><span class="key v1"></span><span class="key v2"></span></div></div>
+                <figcaption>Laje em 3D</figcaption>
+              </figure>
+            </div>
+            <figcaption class="gal-cap"><span>Seu vendedor mostra o projeto ao cliente no celular</span></figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===================== OFERTA + CADASTRO (engenheiros e fabricantes) ===================== -->
+  <div class="shared" hidden>
+    <section class="offer" id="cadastro" aria-labelledby="t-oferta">
+      <div class="corner" aria-hidden="true"><i></i><i></i></div>
+      <div class="wrap offer-grid">
+        <div class="offer-intro">
+          <p class="offer-tag"><span><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg>Megaobra 2026 · 24 a 26 de novembro</span><span><svg class="i" aria-hidden="true"><use href="#i-pin"/></svg>Expominas, BH</span></p>
+          <h2 id="t-oferta">Acesso gratuito para quem visitou a Megaobra</h2>
+          <p class="text">Um brinde especial para quem conheceu o CADLAJE na feira. Vale só para cadastros feitos por esta página.</p>
+        </div>
+        <ul class="checks offer-checks">
+          <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Sistema fácil e intuitivo</li>
+          <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Projetos de todos os tipos de laje</li>
+          <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>No computador e no celular</li>
+        </ul>
+
+        <div class="card">
+          <p class="selo"><span><svg class="i" aria-hidden="true"><use href="#i-gift"/></svg><b>Brinde<br>especial</b> <small>Megaobra</small></span></p>
+          <form id="form-cadastro" novalidate>
+            <h3>Garanta seu acesso gratuito</h3>
+            <p class="sub">São só 3 campos.</p>
+            <div class="field">
+              <label for="nome">Nome completo</label>
+              <input id="nome" name="nome" type="text" autocomplete="name" autocapitalize="words" enterkeyhint="next" placeholder="Como você se chama?" required aria-describedby="nome-erro">
+              <p class="erro" id="nome-erro"></p>
+            </div>
+            <div class="field">
+              <label for="telefone">Telefone (WhatsApp)</label>
+              <input id="telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel-national" enterkeyhint="next" placeholder="(31) 99999-9999" required aria-describedby="telefone-erro">
+              <p class="erro" id="telefone-erro"></p>
+            </div>
+            <div class="field" data-campo="crea">
+              <label for="crea">CREA</label>
+              <input id="crea" name="crea" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" enterkeyhint="send" placeholder="Número do seu registro" aria-describedby="crea-erro">
+              <p class="erro" id="crea-erro"></p>
+            </div>
+            <div class="field" data-campo="empresa" hidden>
+              <label for="empresa">Nome da fábrica</label>
+              <input id="empresa" name="empresa" type="text" autocomplete="organization" autocapitalize="words" enterkeyhint="send" placeholder="Nome da sua fábrica" aria-describedby="empresa-erro">
+              <p class="erro" id="empresa-erro"></p>
+            </div>
+            <div class="hp" aria-hidden="true"><label for="site">Site</label><input id="site" name="site" type="text" tabindex="-1" autocomplete="off"></div>
+            <button class="btn btn-orange btn-block" id="enviar" type="submit"><span id="enviar-txt">Liberar acesso gratuito</span><span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span></button>
+            <p class="privacy"><svg class="i"><use href="#i-shield"/></svg>Usamos seus dados só para liberar o seu acesso e falar com você sobre o CADLAJE.</p>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="ok" id="ok" hidden tabindex="-1">
+            <span class="ok-ico"><svg class="i"><use href="#i-badge"/></svg></span>
+            <h3 id="ok-titulo">Cadastro recebido!</h3>
+            <p id="ok-msg"></p>
+            <a class="btn btn-orange btn-block" id="ok-zap" href="#" target="_blank" rel="noopener" hidden>Enviar pelo WhatsApp <span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span></a>
+            <p class="ok-tag">Brinde especial Megaobra 2026</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="t-faq">
+      <div class="wrap">
+        <p class="eyebrow">Dúvidas</p>
+        <h2 id="t-faq">Perguntas frequentes</h2>
+        <div class="faq-grid">
+          <div class="qa"><h3>Quem pode se cadastrar?</h3><p>Engenheiros e fabricantes de lajes que visitaram a Megaobra 2026.</p></div>
+          <div class="qa"><h3>O acesso é gratuito mesmo?</h3><p>Sim. É um brinde especial da Megaobra, só para cadastros feitos por esta página.</p></div>
+          <div class="qa"><h3>Como recebo o acesso?</h3><p>Nossa equipe entra em contato pelo telefone informado para liberar o seu acesso.</p></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="img/logo-cadlaje.webp" alt="CADLAJE · Projeto e orçamento de lajes" width="900" height="347" loading="lazy">
+    <p>© 2026 CADLAJE. Brinde especial Megaobra 2026, válido para cadastros feitos por esta página.</p>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky">
+  <button class="btn btn-orange" type="button" data-ir="cadastro">Quero meu acesso gratuito <span class="arrow"><svg class="i"><use href="#i-arrow"/></svg></span></button>
+</div>
+
+<dialog class="zoom" id="zoom" aria-label="Imagem ampliada">
+  <figure><div class="zoom-pan" id="zoom-pan"><img id="zoom-img" alt=""></div><figcaption id="zoom-cap"></figcaption><p class="zoom-hint" aria-hidden="true">Arraste a imagem para os lados <svg class="i"><use href="#i-arrow"/></svg></p></figure>
+  <button class="zoom-close" id="zoom-close" type="button" aria-label="Fechar imagem ampliada"><svg class="i"><use href="#i-x"/></svg></button>
+</dialog>
+
+<script>
+(() => {
+  // ===== Envio dos cadastros =====
+  // Para receber os cadastros: publique a página no seu domínio e preencha os dados do seu projeto no Supabase
+  // (tabela com nome, telefone, crea, empresa, perfil e origem) ou informe o número de WhatsApp abaixo.
+  const CONFIG = {
+    SUPABASE_URL: '',        // ex.: https://suaconta.supabase.co
+    SUPABASE_ANON_KEY: '',   // chave pública "anon" do projeto
+    TABELA: 'cadastros_megaobra',
+    ORIGEM: 'megaobra-2026',
+    WHATSAPP: ''             // sem banco de dados: número que recebe os cadastros, com DDI e DDD (ex.: 5531999999999)
+  };
+
+  // ===== Páginas: #engenheiros, #fabricantes (sem nada = entrada) =====
+  const VIEWS = ['inicio', 'engenheiros', 'fabricantes'];
+  const shared = document.querySelector('.shared');
+  const campoCrea = document.querySelector('[data-campo="crea"]');
+  const campoEmpresa = document.querySelector('[data-campo="empresa"]');
+  const demo = document.getElementById('demo');
+  const modelo = document.getElementById('modelo');
+  const video = document.getElementById('demo-video');
+  const player = demo.querySelector('.player');
+  demo.querySelector('.play').addEventListener('click', () => {
+    video.controls = true;
+    const p = video.play();
+    if (p && typeof p.catch === 'function') p.catch(() => {});
+  });
+  // Quando o vídeo termina, aparece o convite para o cadastro
+  const fimCard = document.getElementById('demo-fim');
+  const fimDoVideo = (sim) => { fimCard.hidden = !sim; player.classList.toggle('fim', sim); };
+  video.addEventListener('play', () => { player.classList.add('tocando'); fimDoVideo(false); });
+  video.addEventListener('pause', () => player.classList.remove('tocando'));
+  video.addEventListener('ended', () => { player.classList.remove('tocando'); fimDoVideo(true); });
+  video.addEventListener('seeking', () => { if (!video.ended) fimDoVideo(false); });
+  document.getElementById('demo-denovo').addEventListener('click', () => {
+    video.currentTime = 0;
+    const p = video.play();
+    if (p && typeof p.catch === 'function') p.catch(() => {});
+  });
+
+  let perfil = 'inicio';
+  const rota = () => {
+    const pedida = location.hash.replace('#', '');
+    perfil = VIEWS.includes(pedida) ? pedida : 'inicio';
+    document.body.dataset.view = perfil;
+    const vaga = document.querySelector('.view[data-view="' + perfil + '"] .demo-slot');
+    if (vaga && demo.parentElement !== vaga) { video.pause(); vaga.appendChild(demo); }
+    const vaga3d = document.querySelector('.view[data-view="' + perfil + '"] .modelo-slot');
+    if (vaga3d && modelo && modelo.parentElement !== vaga3d) vaga3d.appendChild(modelo);
+    document.querySelectorAll('.view').forEach((v) => { v.hidden = v.dataset.view !== perfil; });
+    shared.hidden = perfil === 'inicio';
+    document.querySelectorAll('.switch a').forEach((a) => {
+      if (a.dataset.perfil === perfil) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    campoCrea.hidden = perfil !== 'engenheiros';
+    campoEmpresa.hidden = perfil !== 'fabricantes';
+    atualizarBarra();
+  };
+
+  // ===== Botões que levam a uma parte da página =====
+  const reduzir = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-ir]');
+    if (!b) return;
+    e.preventDefault();
+    let id = b.dataset.ir;
+    if (id === 'cadastro' && perfil === 'inicio') id = 'escolha';   // na entrada, o cadastro começa pela escolha do perfil
+    const alvo = document.getElementById(id);
+    if (alvo) alvo.scrollIntoView({ behavior: reduzir ? 'auto' : 'smooth', block: 'start' });
+  });
+
+  // ===== Ampliar imagem =====
+  const dlg = document.getElementById('zoom');
+  const zImg = document.getElementById('zoom-img');
+  const zCap = document.getElementById('zoom-cap');
+  const zPan = document.getElementById('zoom-pan');
+  const abrirZoom = (img) => {
+    const pan = img.dataset.pan || '';   // plantas e listas: no celular abrem maiores, para arrastar de lado
+    zImg.src = img.currentSrc || img.src;
+    zImg.alt = img.alt;
+    zCap.textContent = img.alt;
+    dlg.classList.toggle('larga', !!pan);
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
+    document.documentElement.classList.add('travado');
+    const centrar = () => { zPan.scrollLeft = pan === 'centro' ? (zPan.scrollWidth - zPan.clientWidth) / 2 : 0; };
+    if (zImg.complete && zImg.naturalWidth) centrar(); else zImg.addEventListener('load', centrar, { once: true });
+  };
+  dlg.addEventListener('close', () => document.documentElement.classList.remove('travado'));
+  const fechar = () => { if (dlg.open) dlg.close(); };
+  document.getElementById('zoom-close').addEventListener('click', fechar);
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) fechar(); });
+
+  // ===== Galerias: miniaturas no computador, arrastar no celular =====
+  document.querySelectorAll('.gal').forEach((gal) => {
+    const track = gal.querySelector('.gal-track');
+    if (!track) return;
+    const slides = Array.from(gal.querySelectorAll('.slide'));
+    const thumbs = Array.from(gal.querySelectorAll('.thumb'));
+    const cap = gal.querySelector('.gal-cap span');
+    const dotsBox = gal.querySelector('.gal-dots');
+    const dots = dotsBox ? slides.map(() => dotsBox.appendChild(document.createElement('i'))) : [];
+    let atual = -1;
+    const ativar = (i) => {
+      if (i < 0 || i === atual) return;
+      atual = i;
+      if (cap) cap.textContent = slides[i].querySelector('img').alt;
+      dots.forEach((d, k) => d.classList.toggle('on', k === i));
+      thumbs.forEach((t, k) => t.setAttribute('aria-pressed', k === i ? 'true' : 'false'));
+    };
+    ativar(0);
+    slides.forEach((s) => s.addEventListener('click', () => abrirZoom(s.querySelector('img'))));
+    thumbs.forEach((t, k) => t.addEventListener('click', () => {
+      ativar(k);
+      track.scrollTo({ left: slides[k].offsetLeft - slides[0].offsetLeft, behavior: reduzir ? 'auto' : 'smooth' });
+    }));
+    if ('IntersectionObserver' in window && slides.length > 1) {
+      const io = new IntersectionObserver((entradas) => {
+        entradas.forEach((en) => { if (en.isIntersecting) ativar(slides.indexOf(en.target)); });
+      }, { root: track, threshold: 0.6 });
+      slides.forEach((s) => io.observe(s));
+    }
+  });
+
+  // ===== Telefone com máscara =====
+  const tel = document.getElementById('telefone');
+  const soDigitos = (v) => v.replace(/\D/g, '');
+  const formatarTel = (d) => {
+    if (!d) return '';
+    if (d.length <= 2) return '(' + d;
+    const ddd = d.slice(0, 2), r = d.slice(2);
+    if (r.length <= 4) return '(' + ddd + ') ' + r;
+    if (d.length <= 10) return '(' + ddd + ') ' + r.slice(0, 4) + '-' + r.slice(4);
+    return '(' + ddd + ') ' + r.slice(0, 5) + '-' + r.slice(5);
+  };
+  tel.addEventListener('input', () => { tel.value = formatarTel(soDigitos(tel.value).slice(0, 11)); });
+
+  // ===== Formulário =====
+  const form = document.getElementById('form-cadastro');
+  const status = document.getElementById('status');
+  const botao = document.getElementById('enviar');
+  const botaoTxt = document.getElementById('enviar-txt');
+  const regras = {
+    nome: { el: document.getElementById('nome'), ok: (v) => v.trim().length >= 3, msg: 'Digite seu nome completo.' },
+    telefone: { el: tel, ok: (v) => [10, 11].includes(soDigitos(v).length), msg: 'Digite o telefone com DDD, por exemplo (31) 99999-9999.' },
+    crea: { el: document.getElementById('crea'), ok: (v) => v.trim().length >= 4, msg: 'Digite o número do seu CREA.' },
+    empresa: { el: document.getElementById('empresa'), ok: (v) => v.trim().length >= 2, msg: 'Digite o nome da sua fábrica.' }
+  };
+  const camposAtivos = () => ['nome', 'telefone', perfil === 'fabricantes' ? 'empresa' : 'crea'];
+  const marcar = (k, ok) => {
+    const c = regras[k];
+    c.el.setAttribute('aria-invalid', ok ? 'false' : 'true');
+    document.getElementById(k + '-erro').textContent = ok ? '' : c.msg;
+  };
+  Object.keys(regras).forEach((k) => {
+    regras[k].el.addEventListener('input', () => {
+      if (regras[k].el.getAttribute('aria-invalid') === 'true' && regras[k].ok(regras[k].el.value)) marcar(k, true);
+    });
+  });
+
+  const mostrarSucesso = (dados) => {
+    const primeiro = (dados.nome || '').trim().split(/\s+/)[0] || '';
+    document.getElementById('ok-titulo').textContent = primeiro ? 'Cadastro recebido, ' + primeiro + '!' : 'Cadastro recebido!';
+    document.getElementById('ok-msg').textContent = 'Nossa equipe vai entrar em contato pelo ' + formatarTel(dados.telefone || '') + ' para liberar o seu acesso.';
+    form.hidden = true;
+    const ok = document.getElementById('ok');
+    ok.hidden = false;
+    ok.focus();
+  };
+
+  // Sem banco de dados: o visitante envia o próprio cadastro pelo WhatsApp, já preenchido
+  const mostrarZap = (dados) => {
+    const linhas = ['Olá! Visitei a Megaobra 2026 e quero meu acesso gratuito ao CADLAJE.', 'Nome: ' + dados.nome, 'Telefone: ' + formatarTel(dados.telefone),
+      dados.perfil === 'fabricante' ? 'Fábrica: ' + dados.empresa : 'CREA: ' + dados.crea];
+    const zap = document.getElementById('ok-zap');
+    zap.href = 'https://wa.me/' + CONFIG.WHATSAPP.replace(/\D/g, '') + '?text=' + encodeURIComponent(linhas.join('\n'));
+    zap.hidden = false;
+    document.getElementById('ok-titulo').textContent = 'Falta só um toque';
+    document.getElementById('ok-msg').textContent = 'Envie seu cadastro pelo WhatsApp para a equipe do CADLAJE liberar o seu acesso.';
+    form.hidden = true;
+    const ok = document.getElementById('ok');
+    ok.hidden = false;
+    ok.focus();
+  };
+
+  const enviar = async (dados) => {
+    const url = CONFIG.SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/' + CONFIG.TABELA;
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: {
+        apikey: CONFIG.SUPABASE_ANON_KEY,
+        Authorization: 'Bearer ' + CONFIG.SUPABASE_ANON_KEY,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal'
+      },
+      body: JSON.stringify(dados)
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+  };
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.className = 'status';
+    status.textContent = '';
+    let primeiroErro = null;
+    camposAtivos().forEach((k) => {
+      const ok = regras[k].ok(regras[k].el.value);
+      marcar(k, ok);
+      if (!ok && !primeiroErro) primeiroErro = regras[k].el;
+    });
+    if (primeiroErro) { primeiroErro.focus(); return; }
+
+    const fabricante = perfil === 'fabricantes';
+    const dados = {
+      nome: regras.nome.el.value.trim(),
+      telefone: soDigitos(tel.value),
+      crea: fabricante ? null : regras.crea.el.value.trim(),
+      empresa: fabricante ? regras.empresa.el.value.trim() : null,
+      perfil: fabricante ? 'fabricante' : 'engenheiro',
+      origem: CONFIG.ORIGEM
+    };
+    if (document.getElementById('site').value) { mostrarSucesso(dados); return; }
+
+    if (!CONFIG.SUPABASE_URL || !CONFIG.SUPABASE_ANON_KEY) {
+      if (CONFIG.WHATSAPP) { mostrarZap(dados); return; }
+      status.className = 'status info';
+      status.textContent = 'Esta página ainda está em demonstração. Seu cadastro não foi enviado.';
+      return;
+    }
+
+    botao.disabled = true;
+    botaoTxt.textContent = 'Enviando…';
+    try {
+      await enviar(dados);
+      mostrarSucesso(dados);
+    } catch (err) {
+      status.className = 'status falha';
+      status.textContent = 'Não foi possível enviar agora. Confira sua internet e tente de novo.';
+    } finally {
+      botao.disabled = false;
+      botaoTxt.textContent = 'Liberar acesso gratuito';
+    }
+  });
+
+  // ===== Botão fixo no celular (some quando um botão de cadastro ou a escolha do perfil já está na tela) =====
+  const sticky = document.getElementById('sticky');
+  const alvos = Array.from(document.querySelectorAll('[data-hero-cta], #cadastro, .view[data-view="inicio"] .hero .choices, #escolha'));
+  const visivel = new Map();
+  function atualizarBarra() {
+    const algumVisivel = alvos.some((a) => visivel.get(a) === true);
+    sticky.classList.toggle('show', visivel.size > 0 && !algumVisivel);
+  }
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entradas) => {
+      entradas.forEach((en) => visivel.set(en.target, en.isIntersecting));
+      atualizarBarra();
+    });
+    alvos.forEach((a) => io.observe(a));
+  }
+
+  // ===== Blocos que aparecem conforme a página rola =====
+  if ('IntersectionObserver' in window && !reduzir) {
+    const ver = new IntersectionObserver((entradas) => {
+      entradas.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('on'); ver.unobserve(en.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -6% 0px' });
+    const por = (el, atraso) => { el.classList.add('rv'); if (atraso) el.style.setProperty('--rv', atraso + 's'); ver.observe(el); };
+    [['.m3d-head, .m3d-stage, .m3d-tabs, .demo-head, .player, .steps-head, .steps .rail-list, .flowbar .wrap, .step-intro, .mobile-grid > *, .offer-intro, .faq .eyebrow, .faq h2, .escolha-grid > *', 0],
+      ['.step-detail, .offer-checks', .08], ['.step .gal, .offer .card', .12]]
+      .forEach(([sel, atraso]) => document.querySelectorAll(sel).forEach((el) => por(el, atraso)));
+    document.querySelectorAll('.perks-grid, .faq-grid').forEach((g) => Array.from(g.children).forEach((el, i) => por(el, i * .08)));
+  }
+
+  // ===== Troca de página: vai direto ao alto (ou ao cadastro, quando o visitante escolheu o perfil no fecho da entrada) =====
+  let irAoCadastro = false;
+  document.querySelectorAll('[data-cadastro]').forEach((a) => a.addEventListener('click', () => { irAoCadastro = true; }));
+  window.addEventListener('hashchange', () => {
+    rota();
+    const raiz = document.documentElement;
+    raiz.style.scrollBehavior = 'auto';
+    if (irAoCadastro && perfil !== 'inicio') document.getElementById('cadastro').scrollIntoView({ block: 'start' });
+    else window.scrollTo(0, 0);
+    raiz.style.scrollBehavior = '';
+    irAoCadastro = false;
+  });
+  rota();
+})();
+</script>
+
+<!-- Dados do projeto de exemplo, exportados do CADLAJE (cômodos, medidas, tipo de laje e direção das vigotas) -->
+<script type="application/json" id="projeto-3d">{"cmToPx":1,"slabType":"trelicada_eps","wallHeightCm":280,"rooms":[{"id":"rmwe15mjz","name":"LAJE 1","type":"LAJE_PRINCIPAL","conectadoA":null,"poly":[{"x":1801.16,"y":1257.53},{"x":2235.69,"y":1257.53},{"x":2235.69,"y":1537.53},{"x":1801.16,"y":1537.53}],"arestasInvisiveis":[],"slabType":"trelicada_eps","alturaLajeCm":13,"espessuraCapaCm":6,"params":{"dir":"vertical","cmToPx":1,"strokeCm":15,"useFill":true,"start":"E","offsetCm":0,"wVigotaCm":12,"wFillCm":36,"fillPieceCm":100,"rotation":0,"vigasDuplas":false,"vigotasDuplasEspecificas":[],"apoioVigotasCm":15}},{"id":"rmwe1609u","name":"LAJE 2","type":"LAJE_PRINCIPAL","conectadoA":null,"poly":[{"x":1801.16,"y":1552.53},{"x":2101.16,"y":1552.53},{"x":2101.16,"y":1832.53},{"x":1801.16,"y":1832.53}],"arestasInvisiveis":[],"slabType":"painel_macico","alturaLajeCm":21,"espessuraCapaCm":6,"wallHeightCm":600,"params":{"dir":"vertical","cmToPx":1,"strokeCm":15,"useFill":false,"start":"E","offsetCm":0,"wVigotaCm":25,"wFillCm":15,"fillPieceCm":100,"rotation":0,"vigasDuplas":false,"vigotasDuplasEspecificas":[],"apoioVigotasCm":15}},{"id":"rmwe164ke","name":"LAJE 3","type":"LAJE_PRINCIPAL","conectadoA":null,"poly":[{"x":1801.16,"y":1847.53},{"x":2101.16,"y":1847.53},{"x":2101.16,"y":2127.53},{"x":1801.16,"y":2127.53}],"arestasInvisiveis":[],"slabType":"trelicada_eps","alturaLajeCm":13,"espessuraCapaCm":6,"params":{"dir":"vertical","cmToPx":1,"strokeCm":15,"useFill":true,"start":"E","offsetCm":0,"wVigotaCm":12,"wFillCm":36,"fillPieceCm":100,"rotation":0,"vigasDuplas":false,"vigotasDuplasEspecificas":[],"apoioVigotasCm":15}},{"id":"rmwe166vk","name":"LAJE 4","type":"LAJE_PRINCIPAL","conectadoA":null,"poly":[{"x":2116.16,"y":1552.53},{"x":2516.33,"y":1552.53},{"x":2516.33,"y":1832.53},{"x":2116.16,"y":1832.53}],"arestasInvisiveis":[],"slabType":"trelicada_eps","alturaLajeCm":13,"espessuraCapaCm":6,"params":{"dir":"vertical","cmToPx":1,"strokeCm":15,"useFill":true,"start":"E","offsetCm":0,"wVigotaCm":12,"wFillCm":36,"fillPieceCm":100,"rotation":0,"vigasDuplas":false,"vigotasDuplasEspecificas":[],"apoioVigotasCm":15}},{"id":"rmwe16dmi","name":"LAJE 5","type":"LAJE_PRINCIPAL","conectadoA":null,"poly":[{"x":2250.69,"y":1257.53},{"x":2616.78,"y":1257.53},{"x":2616.78,"y":1537.53},{"x":2250.69,"y":1537.53}],"arestasInvisiveis":[],"slabType":"trelicada_eps","alturaLajeCm":13,"espessuraCapaCm":6,"params":{"dir":"horizontal","cmToPx":1,"strokeCm":15,"useFill":true,"start":"E","offsetCm":0,"wVigotaCm":12,"wFillCm":36,"fillPieceCm":100,"rotation":0,"vigasDuplas":false,"vigotasDuplasEspecificas":[],"apoioVigotasCm":15,"dirLockedByUser":true}},{"id":"beiral_mwe16wa3_0","name":"BEIRAL TOCO, BT 1","type":"BEIRAL_EM_BALANCO","conectadoA":"rmwe166vk","poly":[{"x":2591.33,"y":1552.53},{"x":2591.33,"y":1832.53},{"x":2516.33,"y":1832.53},{"x":2516.33,"y":1552.53}],"arestasInvisiveis":[2],"slabType":"trelicada_eps","alturaLajeCm":13,"espessuraCapaCm":6,"params":{"dir":"horizontal","cmToPx":1,"strokeCm":0.05,"useFill":true,"start":"E","offsetCm":0,"wVigotaCm":12,"wFillCm":36,"fillPieceCm":100,"rotation":0,"vigasDuplas":false,"vigotasDuplasEspecificas":[],"apoioVigotasCm":15}},{"id":"rmwe175o2","name":"LAJE 6","type":"LAJE_PRINCIPAL","conectadoA":null,"poly":[{"x":2116.16,"y":1847.53},{"x":2516.33,"y":1847.53},{"x":2516.33,"y":2127.53},{"x":2116.16,"y":2127.53}],"arestasInvisiveis":[],"slabType":"trelicada_eps","alturaLajeCm":13,"espessuraCapaCm":6,"params":{"dir":"vertical","cmToPx":1,"strokeCm":15,"useFill":true,"start":"E","offsetCm":0,"wVigotaCm":12,"wFillCm":36,"fillPieceCm":100,"rotation":0,"vigasDuplas":false,"vigotasDuplasEspecificas":[],"apoioVigotasCm":15}},{"id":"beiral_mwe17ck2_0","name":"BEIRAL TOCO, BT 2","type":"BEIRAL_EM_BALANCO","conectadoA":"rmwe175o2","poly":[{"x":2591.33,"y":1847.53},{"x":2591.33,"y":2127.53},{"x":2516.33,"y":2127.53},{"x":2516.33,"y":1847.53}],"arestasInvisiveis":[2],"slabType":"trelicada_eps","alturaLajeCm":13,"espessuraCapaCm":6,"params":{"dir":"horizontal","cmToPx":1,"strokeCm":0.05,"useFill":true,"start":"E","offsetCm":0,"wVigotaCm":12,"wFillCm":36,"fillPieceCm":100,"rotation":0,"vigasDuplas":false,"vigotasDuplasEspecificas":[],"apoioVigotasCm":15}},{"id":"beiral_mwe17in6_0","name":"BEIRAL EM BALANÇO, BB 1","type":"BEIRAL_EM_BALANCO","conectadoA":"rmwe16dmi","poly":[{"x":2691.78,"y":1257.53},{"x":2691.78,"y":1537.53},{"x":2616.78,"y":1537.53},{"x":2616.78,"y":1257.53}],"arestasInvisiveis":[2],"slabType":"trelicada_eps","alturaLajeCm":13,"espessuraCapaCm":6,"params":{"dir":"horizontal","cmToPx":1,"strokeCm":0.05,"useFill":true,"start":"E","offsetCm":0,"wVigotaCm":12,"wFillCm":36,"fillPieceCm":100,"rotation":0,"vigasDuplas":false,"vigotasDuplasEspecificas":[],"apoioVigotasCm":15}}]}</script>
+<script>
+/*M3D:INICIO*/
+/* ===== 3D interativo =====
+   O projeto vem do arquivo exportado pelo CADLAJE (cômodos, medidas, tipo de laje, direção das vigotas).
+   A página lê esses dados e monta paredes, vigotas, enchimento, escoras, fôrmas e a laje concretada. */
+(() => {
+  'use strict';
+  const secao = document.getElementById('modelo');
+  const fonte = document.getElementById('projeto-3d');
+  if (!secao || !fonte) return;
+  const $ = (s) => secao.querySelector(s);
+  const palco = $('.m3d-stage'), canvas = $('.m3d-canvas'), legenda = $('.m3d-cap');
+  const capT = $('.m3d-cap b'), capS = $('.m3d-cap span'), btTour = $('[data-m3d="tour"]');
+  const abas = Array.from(secao.querySelectorAll('.m3d-tab'));
+  const calmo = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const rad = (g) => g * Math.PI / 180;
+  const limitar = (v, a, b) => Math.min(b, Math.max(a, v));
+
+  // Cada etapa: o que aparece (0 a 1) e de que altura a câmera olha
+  const ORDEM = ['completo', 'vigotas', 'enchimento', 'escoras', 'formas', 'concreto'];
+  const ESTADOS = {
+    completo:   { nome: 'Projeto completo', txt: 'Vigotas, enchimento, escoras e fôrmas', dur: 6.4, el: 25, ver: { vidro: 1, linhas: 1, vigas: 1, escoras: 1, vigotas: 1, ench: 1, formas: 1, concreto: 0 } },
+    vigotas:    { nome: 'Vigotas', txt: 'Vigotas treliçadas e painéis, já na posição', dur: 4.8, el: 36, ver: { vidro: 0, linhas: .6, vigas: 1, escoras: 0, vigotas: 1, ench: 0, formas: 0, concreto: 0 } },
+    enchimento: { nome: 'Enchimento', txt: 'Blocos de EPS entre as vigotas', dur: 4.8, el: 36, ver: { vidro: 0, linhas: .6, vigas: 1, escoras: 0, vigotas: 1, ench: 1, formas: 0, concreto: 0 } },
+    escoras:    { nome: 'Escoras', txt: 'Escoras, longarinas e torres de escoramento', dur: 4.8, el: 15, ver: { vidro: 0, linhas: .5, vigas: 0, escoras: 1, vigotas: 0, ench: 0, formas: 0, concreto: 0 } },
+    formas:     { nome: 'Fôrmas', txt: 'Madeira de fechamento no contorno da laje', dur: 4.8, el: 24, ver: { vidro: 0, linhas: .5, vigas: 0, escoras: 0, vigotas: 0, ench: 0, formas: 1, concreto: 0 } },
+    concreto:   { nome: 'Laje pronta', txt: 'A laje depois da concretagem', dur: 4.8, el: 28, ver: { vidro: 1, linhas: 1, vigas: 1, escoras: 0, vigotas: 0, ench: 0, formas: 0, concreto: 1 } }
+  };
+  const NOMES = ['vidro', 'linhas', 'vigas', 'escoras', 'vigotas', 'ench', 'formas', 'concreto'];   // ordem em que as partes entram
+  const SOBE = { vigotas: 34, ench: 58, formas: 42, concreto: 76, escoras: -22 };                     // de onde cada parte "chega" (cm)
+
+  const COR = { viga: 0x77849b, vigota: 0xd2c4a2, painel: 0xcfd4dc, eps: 0xf7f9fc, tubo: 0x8798b4, tuboFino: 0xb7c4d6, sapata: 0x5f6f89,
+    longarina: 0xc6d0de, madeira: 0xd69a5e, sarrafo: 0xb67c44, barrote: 0xdfa86c, concreto: 0xcfd4db, vidro: 0xc9d9f4 };
+  const VARIA = { madeira: .16, sarrafo: .14, barrote: .1, eps: .035, vigota: .05, concreto: 0 };   // leve variação de tom entre peças
+  const TRACO = { aco: { cor: 0x8499b8, op: .78, ordem: 2 }, contorno: { cor: 0xd3e2ff, op: .5, ordem: 5 }, borda: { cor: 0xffffff, op: .55, ordem: 6 } };
+
+  // ---------- Do arquivo do projeto para as peças ----------
+  const gerar = (proj) => {
+    const r2 = (v) => Math.round(v * 100) / 100;
+    const cx = [], tb = [], ln = [];
+    const caixa = (cam, cor, x0, x1, y0, y1, a0, a1) => { if (x1 - x0 > .04 && y1 - y0 > .04 && a1 - a0 > .04) cx.push([cam, cor, x0, x1, y0, y1, a0, a1]); };
+    const qd = [], plano = (cam, cor, a, b, c, d, n) => qd.push([cam, cor, a, b, c, d, n]);
+    const tubo = (cam, cor, p, q, r) => tb.push([cam, cor, p, q, r]);
+    const linha = (cam, cor, p, q) => ln.push([cam, cor, p, q]);
+
+    const todos = proj.rooms.map((r) => {
+      const xs = r.poly.map((p) => p.x), ys = r.poly.map((p) => p.y), pr = r.params || {};
+      return { id: r.id, princ: r.type === 'LAJE_PRINCIPAL', laje: r.slabType || proj.slabType, h: r.alturaLajeCm || 13, capa: r.espessuraCapaCm || 5,
+        pe: r.wallHeightCm || proj.wallHeightCm || 280, x0: Math.min(...xs), x1: Math.max(...xs), y0: Math.min(...ys), y1: Math.max(...ys),
+        vert: pr.dir !== 'horizontal', wV: pr.wVigotaCm || 12, wF: pr.wFillCm || 36, fill: pr.useFill !== false, peca: pr.fillPieceCm || 100, esp: pr.strokeCm || 15, pai: r.conectadoA };
+    });
+    const ox = Math.min(...todos.map((r) => r.x0)), oy = Math.min(...todos.map((r) => r.y0));
+    todos.forEach((r) => { r.x0 = r2(r.x0 - ox); r.x1 = r2(r.x1 - ox); r.y0 = r2(r.y0 - oy); r.y1 = r2(r.y1 - oy); });
+    const princ = todos.filter((r) => r.princ), beirais = todos.filter((r) => !r.princ);
+    const E = princ[0].esp;                                   // espessura das paredes
+    beirais.forEach((b) => { b.dono = princ.find((r) => r.id === b.pai) || null; if (b.dono) b.pe = b.dono.pe; });
+
+    // Grade de células: cômodo, parede (faixa entre os cômodos) ou beiral
+    const unicos = (a) => Array.from(new Set(a.map(r2))).sort((p, q) => p - q);
+    const gx = unicos([].concat(...princ.map((r) => [r.x0 - E, r.x0, r.x1, r.x1 + E]), ...beirais.map((r) => [r.x0, r.x1])));
+    const gy = unicos([].concat(...princ.map((r) => [r.y0 - E, r.y0, r.y1, r.y1 + E]), ...beirais.map((r) => [r.y0, r.y1])));
+    const nx = gx.length - 1, ny = gy.length - 1;
+    const dentro = (x, y, r, f) => x > r.x0 - f && x < r.x1 + f && y > r.y0 - f && y < r.y1 + f;
+    const cel = [];
+    for (let j = 0; j < ny; j++) for (let i = 0; i < nx; i++) {
+      const x = (gx[i] + gx[i + 1]) / 2, y = (gy[j] + gy[j + 1]) / 2;
+      const com = princ.find((r) => dentro(x, y, r, 0)), viz = princ.filter((r) => dentro(x, y, r, E)), bei = beirais.find((r) => dentro(x, y, r, 0));
+      const c = { i, j, x0: gx[i], x1: gx[i + 1], y0: gy[j], y1: gy[j + 1], tipo: null, pe: 0 };
+      if (com) { c.tipo = 'comodo'; c.pe = com.pe; }
+      else if (viz.length) { c.tipo = 'parede'; c.pe = Math.max(...viz.map((r) => r.pe)); }
+      else if (bei) { c.tipo = 'beiral'; c.pe = bei.pe; }
+      cel.push(c);
+    }
+    const em = (i, j) => (i < 0 || j < 0 || i >= nx || j >= ny) ? null : cel[j * nx + i];
+    const faixa = (g, v) => { for (let k = 0; k < g.length - 1; k++) if (v > g[k] && v < g[k + 1]) return k; return -1; };
+    const noPonto = (x, y) => em(faixa(gx, x), faixa(gy, y));
+    const niveis = unicos(princ.map((r) => r.pe));
+    const hN = {}; niveis.forEach((n) => { hN[n] = Math.max(...princ.filter((r) => r.pe === n).map((r) => r.h)); });
+    const QUATRO = [[1, 0], [-1, 0], [0, 1], [0, -1]];
+
+    // Paredes (vidro) e cintas no topo: as células são agrupadas por faixa de altura e viram cascas, sem faces internas
+    const VIGA = 25, cascas = {};
+    const naCasca = (cam, a, b, c) => { if (b - a > .05) { const k = cam + '|' + a + '|' + b; (cascas[k] = cascas[k] || new Set()).add(c); } };
+    cel.forEach((c) => {
+      if (c.tipo !== 'parede') return;
+      const cintas = [[c.pe - VIGA, c.pe]];
+      niveis.forEach((n) => { if (n < c.pe && QUATRO.some(([dx, dy]) => { const v = em(c.i + dx, c.j + dy); return v && v.tipo && v.pe === n; })) cintas.push([n - VIGA, n]); });
+      cintas.sort((p, q) => p[0] - q[0]);
+      let base = 0;
+      cintas.forEach(([a, b]) => { naCasca('vidro', base, a, c); naCasca('vigas', a, b, c); base = b; });
+    });
+
+    // Vigotas, painéis e enchimento
+    const AP_EXT = 12, AP_INT = 7, FOLGA = 2.5;
+    const apoio = (x, y) => { const v = noPonto(x, y); return v && v.tipo === 'comodo' ? AP_INT : AP_EXT; };
+    const distribuir = (a0, a1, r) => {
+      const pos = [];
+      if (r.laje === 'painel_macico') { for (let p = a0; p + r.wV <= a1 + .01; p += r.wV) pos.push(r2(p)); return pos; }
+      for (let p = a0 + r.wF; p + r.wV <= a1 + .01; p += r.wV + r.wF) pos.push(r2(p));
+      const fim = pos.length ? pos[pos.length - 1] + r.wV : a0;
+      if (a1 - fim > r.wF + .01) pos.push(r2(a1 - r.wV));        // vão que sobra maior que o enchimento: fecha com mais uma vigota
+      return pos;
+    };
+    const trelica = (vert, c, s, e, alt, hT, meia) => {
+      const P = (t, d, a) => vert ? [c + d, t, a] : [t, c + d, a];
+      const L = (a, b) => linha('vigotas', 'aco', a, b);
+      const i = s + 2, f = e - 2;
+      L(P(i, 0, alt + hT), P(f, 0, alt + hT)); L(P(i, -meia, alt), P(f, -meia, alt)); L(P(i, meia, alt), P(f, meia, alt));
+      for (let t = i; t < f - .01; t += 20) {
+        const m = Math.min(t + 10, f), g = Math.min(t + 20, f);
+        [-meia, meia].forEach((d) => { L(P(t, d, alt), P(m, 0, alt + hT)); if (g > m) L(P(m, 0, alt + hT), P(g, d, alt)); });
+      }
+    };
+    const pecaVigota = (r, vert, p, s, e, nivel) => {
+      const painel = r.laje === 'painel_macico', folga = painel ? .35 : 0, hb = painel ? 4 : 3, cor = painel ? 'painel' : 'vigota';
+      if (vert) caixa('vigotas', cor, p + folga, p + r.wV - folga, s, e, nivel, nivel + hb); else caixa('vigotas', cor, s, e, p + folga, p + r.wV - folga, nivel, nivel + hb);
+      trelica(vert, p + r.wV / 2, s, e, nivel + hb, limitar(r.h - hb - 2, 6, 12), Math.min(3.5, r.wV / 2 - 2));
+    };
+    princ.forEach((r) => {
+      const V = r.vert, a0 = V ? r.x0 : r.y0, a1 = V ? r.x1 : r.y1, b0 = V ? r.y0 : r.x0, b1 = V ? r.y1 : r.x1;
+      const P = (a, b) => V ? [a, b] : [b, a];                 // (eixo da distribuição, eixo do comprimento) → planta
+      const pos = distribuir(a0, a1, r);
+      const meus = beirais.filter((b) => b.dono === r);
+      meus.forEach((b) => {
+        const lado = Math.abs(b.x0 - r.x1) < .5 ? 'x+' : Math.abs(b.x1 - r.x0) < .5 ? 'x-' : Math.abs(b.y0 - r.y1) < .5 ? 'y+' : 'y-';
+        const mais = lado[1] === '+';
+        b.info = { lado, mais, noComp: (lado[0] === 'y') === V, ponta: lado[0] === 'x' ? (mais ? b.x1 : b.x0) : (mais ? b.y1 : b.y0) };
+      });
+      const acha = (noComp, mais) => { const b = meus.find((x) => x.info.noComp === noComp && x.info.mais === mais); return b || null; };
+      const balMais = acha(true, true), balMenos = acha(true, false);     // beiral em balanço: as vigotas continuam até a ponta
+      pos.forEach((p) => {
+        const m = p + r.wV / 2;
+        const s = balMenos ? balMenos.info.ponta + FOLGA : b0 - apoio(...P(m, b0 - E - 1));
+        const e = balMais ? balMais.info.ponta - FOLGA : b1 + apoio(...P(m, b1 + E + 1));
+        pecaVigota(r, V, p, s, e, r.pe);
+      });
+      const comEps = r.fill && r.laje !== 'painel_macico', eH = Math.max(4, r.h - r.capa);
+      const eps = (aa, ab, ba, bb) => { const J = .35; if (ab - aa > 1.6 && bb - ba > 1.6) { const q0 = P(aa + J, ba + J), q1 = P(ab - J, bb - J); caixa('ench', 'eps', q0[0], q1[0], q0[1], q1[1], r.pe, r.pe + eH); } };
+      const tocoMais = acha(false, true), tocoMenos = acha(false, false); // beiral toco: peças curtas atravessadas
+      if (comEps) {
+        const vaos = []; let ini = a0;
+        pos.forEach((p) => { if (p - ini > 2) vaos.push([ini, p]); ini = p + r.wV; });
+        if (a1 - ini > 2) vaos.push([ini, a1]);
+        vaos.forEach(([va, vb]) => {
+          if ((tocoMais && Math.abs(vb - a1) < .01) || (tocoMenos && Math.abs(va - a0) < .01)) return;   // vão cortado pelos tocos do beiral
+          for (let t = b0; t < b1 - 1; t += r.peca) eps(va, vb, t, Math.min(t + r.peca, b1));
+          if (balMais) eps(va, vb, b1 + E, balMais.info.ponta - FOLGA);
+          if (balMenos) eps(va, vb, balMenos.info.ponta + FOLGA, b0 - E);
+        });
+      }
+      [tocoMais, tocoMenos].forEach((b) => {
+        if (!b) return;
+        const m = b.info, e0 = V ? b.y0 : b.x0, e1 = V ? b.y1 : b.x1;
+        const sp = distribuir(e0, e1, r);
+        const aIni = m.mais ? (pos.length ? pos[pos.length - 1] + r.wV : a0) : m.ponta + FOLGA;
+        const aFim = m.mais ? m.ponta - FOLGA : (pos.length ? pos[0] : a1);
+        sp.forEach((q) => pecaVigota(r, !V, q, aIni, aFim, r.pe));
+        if (!comEps) return;
+        const vaos = []; let g0 = e0;
+        sp.forEach((q) => { if (q - g0 > 2) vaos.push([g0, q]); g0 = q + r.wV; });
+        if (e1 - g0 > 2) vaos.push([g0, e1]);
+        vaos.forEach(([ga, gb]) => {
+          if (m.mais) { eps(aIni, a1, ga, gb); eps(a1 + E, aFim, ga, gb); } else { eps(a0, aFim, ga, gb); eps(aIni, a0 - E, ga, gb); }
+        });
+      });
+    });
+
+    // Escoramento: longarinas atravessadas às vigotas, postes ao longo delas e torres nas lajes altas
+    const LG_H = 8, LG_W = 6, TAB = 2.5;
+    const poste = (x, y, topo, aoLongoX) => {
+      const emenda = limitar(topo * .56, 110, topo - 50);
+      caixa('escoras', 'sapata', x - 7, x + 7, y - 7, y + 7, 0, 1);
+      tubo('escoras', 'tubo', [x, y, 1], [x, y, emenda], 3.1);
+      tubo('escoras', 'tuboFino', [x, y, emenda], [x, y, topo - 1.2], 2.35);
+      tubo('escoras', 'sapata', [x, y, emenda - 5], [x, y, emenda + 1.5], 4.1);
+      caixa('escoras', 'sapata', x - 5.5, x + 5.5, y - 5.5, y + 5.5, topo - 1.2, topo);
+      if (aoLongoX) { caixa('escoras', 'sapata', x - 4, x + 4, y - 4.6, y - 3.5, topo, topo + 5); caixa('escoras', 'sapata', x - 4, x + 4, y + 3.5, y + 4.6, topo, topo + 5); }
+      else { caixa('escoras', 'sapata', x - 4.6, x - 3.5, y - 4, y + 4, topo, topo + 5); caixa('escoras', 'sapata', x + 3.5, x + 4.6, y - 4, y + 4, topo, topo + 5); }
+    };
+    const linhaEscoras = (aoLongoX, fixo, i0, i1, topo, nasPontas) => {
+      const L = i1 - i0, f0 = fixo - LG_W / 2, f1 = fixo + LG_W / 2, pts = [];
+      if (aoLongoX) caixa('escoras', 'longarina', i0 + 3.5, i1 - 3.5, f0, f1, topo - LG_H, topo); else caixa('escoras', 'longarina', f0, f1, i0 + 3.5, i1 - 3.5, topo - LG_H, topo);
+      if (nasPontas) { const n = Math.max(2, Math.ceil(L / 80) + 1); for (let k = 0; k < n; k++) pts.push(i0 + 10 + (L - 20) * k / (n - 1)); }
+      else { const n = Math.max(1, Math.ceil(L / 80) - 1); for (let k = 1; k <= n; k++) pts.push(i0 + L * k / (n + 1)); }
+      pts.forEach((t) => { if (aoLongoX) poste(t, fixo, topo - LG_H, true); else poste(fixo, t, topo - LG_H, false); });
+    };
+    const torres = (r) => {
+      const V = r.vert, a0 = V ? r.x0 : r.y0, a1 = V ? r.x1 : r.y1, b0 = V ? r.y0 : r.x0, b1 = V ? r.y1 : r.x1;
+      const P = (a, b, alt) => V ? [a, b, alt] : [b, a, alt];
+      const R2 = (a, b) => V ? [a, b] : [b, a];
+      const LADO = 120, nT = Math.max(1, Math.round((a1 - a0) / 150)), vao = ((a1 - a0) - nT * LADO) / (nT + 1);
+      const bc = (b0 + b1) / 2, t0 = bc - LADO / 2, t1 = bc + LADO / 2;
+      const topo = r.pe - .25, yLong = topo - 12, yCab = yLong - LG_H, hQ = yCab - 18;
+      for (let k = 0; k < nT; k++) {
+        const ta = a0 + vao + k * (LADO + vao), tz = ta + LADO;
+        const cantos = [[ta, t0], [tz, t0], [tz, t1], [ta, t1]];
+        cantos.forEach(([a, b]) => {
+          const q = R2(a, b);
+          caixa('escoras', 'sapata', q[0] - 7, q[0] + 7, q[1] - 7, q[1] + 7, 0, 1);
+          tubo('escoras', 'tubo', P(a, b, 1), P(a, b, hQ), 2.4);
+          tubo('escoras', 'tuboFino', P(a, b, hQ), P(a, b, yCab - 1.2), 1.6);
+          caixa('escoras', 'sapata', q[0] - 5.5, q[0] + 5.5, q[1] - 5.5, q[1] + 5.5, yCab - 1.2, yCab);
+        });
+        for (let alt = 22; alt <= hQ - 8; alt += 100) cantos.forEach((c, i) => { const d = cantos[(i + 1) % 4]; tubo('escoras', 'tubo', P(c[0], c[1], alt), P(d[0], d[1], alt), 1.7); });
+        let troca = 0;
+        for (let alt = 22; alt + 100 <= hQ - 7.9; alt += 100, troca ^= 1) [[0, 1], [3, 2]].forEach(([i, j]) => {
+          const c = cantos[troca ? j : i], d = cantos[troca ? i : j];
+          tubo('escoras', 'tuboFino', P(c[0], c[1], alt), P(d[0], d[1], alt + 100), 1.25);
+        });
+        [ta, tz].forEach((a) => { const q0 = R2(a - LG_W / 2, t0 - 34), q1 = R2(a + LG_W / 2, t1 + 34); caixa('escoras', 'longarina', q0[0], q1[0], q0[1], q1[1], yCab, yLong); });
+      }
+      for (let k = 1; k <= 2; k++) { const b = b0 + (b1 - b0) * k / 3, q0 = R2(a0 + 5, b - 3), q1 = R2(a1 - 5, b + 3); caixa('escoras', 'barrote', q0[0], q1[0], q0[1], q1[1], yLong, topo); }
+    };
+    princ.forEach((r) => {
+      if (r.pe > 400) { torres(r); return; }
+      const V = r.vert, vao = V ? r.y1 - r.y0 : r.x1 - r.x0, n = Math.max(1, Math.ceil(vao / 120) - 1);
+      for (let k = 1; k <= n; k++) {
+        if (V) linhaEscoras(true, r.y0 + vao * k / (n + 1), r.x0, r.x1, r.pe - .25, false);
+        else linhaEscoras(false, r.x0 + vao * k / (n + 1), r.y0, r.y1, r.pe - .25, false);
+      }
+    });
+    beirais.forEach((b) => {
+      if (!b.info) return;
+      const fixo = b.info.ponta + (b.info.mais ? -12 : 12), topo = b.pe - TAB - .25;
+      if (b.info.lado[0] === 'x') linhaEscoras(false, fixo, b.y0, b.y1, topo, true); else linhaEscoras(true, fixo, b.x0, b.x1, topo, true);
+    });
+
+    // Contorno de cada nível (serve para as fôrmas e para a laje concretada)
+    const noNivel = (nv) => (c) => !!c && !!c.tipo && c.pe === nv;
+    const bordas = (teste, chave, soltas) => {
+      const seg = [];
+      cel.forEach((c) => {
+        if (!teste(c)) return;
+        QUATRO.forEach(([dx, dy]) => {
+          const v = em(c.i + dx, c.j + dy);
+          if (teste(v)) return;
+          const k = chave ? chave(c, v) : '';
+          if (dx) seg.push({ eixo: 'y', fixo: dx > 0 ? c.x1 : c.x0, n: dx, a: c.y0, b: c.y1, k });
+          else seg.push({ eixo: 'x', fixo: dy > 0 ? c.y1 : c.y0, n: dy, a: c.x0, b: c.x1, k });
+        });
+      });
+      if (soltas) return seg;
+      const ord = (p, q) => (p < q ? -1 : p > q ? 1 : 0);
+      seg.sort((p, q) => ord(p.eixo, q.eixo) || p.fixo - q.fixo || p.n - q.n || ord(p.k, q.k) || p.a - q.a);
+      const sai = [];
+      seg.forEach((s) => { const u = sai[sai.length - 1]; if (u && u.eixo === s.eixo && u.fixo === s.fixo && u.n === s.n && u.k === s.k && Math.abs(u.b - s.a) < .01) u.b = s.b; else sai.push(Object.assign({}, s)); });
+      return sai;
+    };
+
+    const extrudar = (cam, cor, teste, a0, a1) => {
+      cel.forEach((c) => {
+        if (!teste(c)) return;
+        plano(cam, cor, [c.x0, c.y0, a1], [c.x1, c.y0, a1], [c.x1, c.y1, a1], [c.x0, c.y1, a1], [0, 0, 1]);
+        plano(cam, cor, [c.x0, c.y0, a0], [c.x1, c.y0, a0], [c.x1, c.y1, a0], [c.x0, c.y1, a0], [0, 0, -1]);
+      });
+      bordas(teste, null, true).forEach((s) => {
+        if (s.eixo === 'y') plano(cam, cor, [s.fixo, s.a, a0], [s.fixo, s.b, a0], [s.fixo, s.b, a1], [s.fixo, s.a, a1], [s.n, 0, 0]);
+        else plano(cam, cor, [s.a, s.fixo, a0], [s.b, s.fixo, a0], [s.b, s.fixo, a1], [s.a, s.fixo, a1], [0, s.n, 0]);
+      });
+    };
+    Object.keys(cascas).forEach((k) => { const q = k.split('|'), S = cascas[k]; extrudar(q[0], q[0] === 'vidro' ? 'vidro' : 'viga', (c) => !!c && S.has(c), +q[1], +q[2]); });
+
+    // Fôrmas de madeira: tábuas no contorno (com sarrafos), fundo dos beirais e laterais das vigas
+    niveis.forEach((nv) => {
+      const teste = noNivel(nv), hL = hN[nv];
+      const tipo = (c, v) => (v && v.tipo === 'parede' && v.pe > nv) ? 'encontro' : c.tipo === 'beiral' ? 'beiral' : 'parede';
+      bordas(teste, tipo).forEach((s) => {
+        const enc = s.k === 'encontro';
+        const alt0 = enc ? nv : s.k === 'beiral' ? nv - TAB : nv - VIGA, alt1 = nv + hL + 1.5;
+        const avanca = (t, sinal) => { const q = s.eixo === 'y' ? [s.fixo - s.n * .5, t + sinal * .5] : [t + sinal * .5, s.fixo - s.n * .5]; return teste(noPonto(q[0], q[1])) ? 0 : TAB; };
+        const a = s.a - (enc ? 0 : avanca(s.a, -1)), b = s.b + (enc ? 0 : avanca(s.b, 1));
+        const f = enc ? s.fixo + s.n * .3 : s.fixo, d0 = Math.min(f, f + s.n * TAB), d1 = Math.max(f, f + s.n * TAB);
+        if (s.eixo === 'y') caixa('formas', 'madeira', d0, d1, a, b, alt0, alt1); else caixa('formas', 'madeira', a, b, d0, d1, alt0, alt1);
+        if (s.k !== 'parede') return;
+        const L = s.b - s.a, n = Math.max(2, Math.round(L / 55) + 1), e0 = s.fixo + s.n * TAB, e1 = e0 + s.n * 2.2, q0 = Math.min(e0, e1), q1 = Math.max(e0, e1);
+        for (let i = 0; i < n; i++) {
+          const t = s.a + 8 + (L - 16) * i / (n - 1);
+          if (s.eixo === 'y') caixa('formas', 'sarrafo', q0, q1, t - 2.5, t + 2.5, alt0, alt1 - 3); else caixa('formas', 'sarrafo', t - 2.5, t + 2.5, q0, q1, alt0, alt1 - 3);
+        }
+      });
+    });
+    cel.forEach((c) => { if (c.tipo === 'beiral') caixa('formas', 'madeira', c.x0, c.x1, c.y0, c.y1, c.pe - TAB, c.pe - .05); });
+    princ.forEach((r) => {
+      const t0 = r.pe - VIGA, t1 = r.pe - .3;
+      caixa('formas', 'madeira', r.x0, r.x1, r.y0, r.y0 + TAB, t0, t1); caixa('formas', 'madeira', r.x0, r.x1, r.y1 - TAB, r.y1, t0, t1);
+      caixa('formas', 'madeira', r.x0, r.x0 + TAB, r.y0 + TAB, r.y1 - TAB, t0, t1); caixa('formas', 'madeira', r.x1 - TAB, r.x1, r.y0 + TAB, r.y1 - TAB, t0, t1);
+    });
+
+    // Laje concretada
+    niveis.forEach((nv) => {
+      const teste = noNivel(nv), hL = hN[nv];
+      extrudar('concreto', 'concreto', teste, nv + .02, nv + hL);
+      bordas(teste).forEach((s) => [nv + hL, nv].forEach((alt) => {
+        if (s.eixo === 'y') linha('concreto', 'borda', [s.fixo, s.a, alt], [s.fixo, s.b, alt]); else linha('concreto', 'borda', [s.a, s.fixo, alt], [s.b, s.fixo, alt]);
+      }));
+    });
+
+    // Arestas das paredes (o "desenho" que fica quando as paredes somem)
+    const hp = (i, j) => { const c = em(i, j); return c && c.tipo === 'parede' ? c.pe : 0; };
+    const alts = [0].concat(niveis);
+    const marca = (A, B, t) => (t === 0 ? (A > 0) !== (B > 0) : (A === t) !== (B === t));
+    for (let j = 0; j < ny; j++) for (let i = 0; i <= nx; i++) alts.forEach((t) => { if (marca(hp(i - 1, j), hp(i, j), t)) linha('linhas', 'contorno', [gx[i], gy[j], t], [gx[i], gy[j + 1], t]); });
+    for (let j = 0; j <= ny; j++) for (let i = 0; i < nx; i++) alts.forEach((t) => { if (marca(hp(i, j - 1), hp(i, j), t)) linha('linhas', 'contorno', [gx[i], gy[j], t], [gx[i + 1], gy[j], t]); });
+    for (let j = 0; j <= ny; j++) for (let i = 0; i <= nx; i++) {
+      const h4 = [hp(i - 1, j - 1), hp(i, j - 1), hp(i, j), hp(i - 1, j)];
+      for (let k = 0; k + 1 < alts.length; k++) {
+        const p = h4.map((h) => h >= alts[k + 1]), n = p.filter(Boolean).length;
+        if (n === 1 || n === 3 || (n === 2 && p[0] === p[2])) linha('linhas', 'contorno', [gx[i], gy[j], alts[k]], [gx[i], gy[j], alts[k + 1]]);
+      }
+    }
+
+    // Pontos de referência para enquadrar a câmera
+    const pontos = [], baixo = niveis[0];
+    [[gx[0], gy[0]], [gx[nx], gy[0]], [gx[nx], gy[ny]], [gx[0], gy[ny]]].forEach(([x, y]) => { pontos.push([x, y, 0]); pontos.push([x, y, baixo + hN[baixo] + 4]); });
+    niveis.slice(1).forEach((nv) => {
+      const cs = cel.filter(noNivel(nv)); if (!cs.length) return;
+      const x0 = Math.min(...cs.map((c) => c.x0)), x1 = Math.max(...cs.map((c) => c.x1)), y0 = Math.min(...cs.map((c) => c.y0)), y1 = Math.max(...cs.map((c) => c.y1));
+      [[x0, y0], [x1, y0], [x1, y1], [x0, y1]].forEach(([x, y]) => pontos.push([x, y, nv + hN[nv] + 4]));
+    });
+    return { caixas: cx, tubos: tb, linhas: ln, planos: qd, pontos, lim: { x0: gx[0], x1: gx[nx], y0: gy[0], y1: gy[ny] }, pegada: cel.filter((c) => c.tipo), baixo };
+  };
+
+  // ---------- Das peças para a cena ----------
+  const construir = (T, proj) => {
+    const G = gerar(proj);
+    const mx = (G.lim.x0 + G.lim.x1) / 2, my = (G.lim.y0 + G.lim.y1) / 2;
+    const W = (p) => new T.Vector3(p[0] - mx, p[2], p[1] - my);
+    const corL = (hex) => new T.Color(hex).convertSRGBToLinear();
+    const cena = new T.Scene();
+
+    // fundo do palco (o mesmo degradê do cartão)
+    const fv = document.createElement('canvas'); fv.width = 512; fv.height = 512;
+    const f2 = fv.getContext('2d'); const fg = f2.createRadialGradient(256, 40, 0, 256, 40, 600);
+    fg.addColorStop(0, '#20427a'); fg.addColorStop(.46, '#13284c'); fg.addColorStop(1, '#0a1529');
+    f2.fillStyle = fg; f2.fillRect(0, 0, 512, 512);
+    const fundo = new T.CanvasTexture(fv); fundo.encoding = T.sRGBEncoding; cena.background = fundo;
+
+    const cam = new T.PerspectiveCamera(27, 1, 80, 40000);
+    cena.add(cam);
+    cena.add(new T.HemisphereLight(0xeaf1ff, 0x22344f, .64));
+    const chave = new T.DirectionalLight(0xfff2df, .56); chave.position.set(1300, 1500, 300); cam.add(chave);      // presa à câmera: a luz acompanha o giro
+    const contra = new T.DirectionalLight(0x9ec1ff, .22); contra.position.set(-2200, 900, -7000); cam.add(contra);
+
+    const camadas = {};
+    NOMES.concat('piso').forEach((n) => { const grupo = new T.Group(); cena.add(grupo); camadas[n] = { grupo, mats: [], v: 0, alvo: 0, espera: 0, sobe: SOBE[n] || 0 }; });
+    const agrupar = (lista) => { const m = {}; lista.forEach((it) => (m[it[0]] = m[it[0]] || []).push(it)); return m; };
+    const cubo = new T.BoxGeometry(1, 1, 1), cano = new T.CylinderGeometry(1, 1, 1, 10);
+    const aux = new T.Object3D(), giro = new T.Object3D(), tc = new T.Color();
+    let semente = 11; const rnd = () => (semente = (semente * 16807) % 2147483647) / 2147483647;
+    const OPV = .27;
+
+    const cxs = agrupar(G.caixas);
+    Object.keys(cxs).forEach((nome) => {
+      const itens = cxs[nome], mat = new T.MeshLambertMaterial({ color: 0xffffff }), malha = new T.InstancedMesh(cubo, mat, itens.length);
+      itens.forEach((it, k) => {
+        aux.position.set((it[2] + it[3]) / 2 - mx, (it[6] + it[7]) / 2, (it[4] + it[5]) / 2 - my);
+        aux.scale.set(it[3] - it[2], it[7] - it[6], it[5] - it[4]); aux.updateMatrix(); malha.setMatrixAt(k, aux.matrix);
+        tc.set(COR[it[1]]).convertSRGBToLinear(); if (VARIA[it[1]]) tc.multiplyScalar(1 - VARIA[it[1]] * rnd()); malha.setColorAt(k, tc);
+      });
+      malha.frustumCulled = false; camadas[nome].grupo.add(malha); camadas[nome].mats.push({ m: mat, base: 1, opaco: true });
+    });
+
+    // paredes, cintas e laje concretada: cascas contínuas (sem emendas entre as células)
+    const pls = agrupar(G.planos), ab = new T.Vector3(), ac = new T.Vector3(), nn = new T.Vector3();
+    Object.keys(pls).forEach((nome) => {
+      const itens = pls[nome], vidro = nome === 'vidro', pos = new Float32Array(itens.length * 18), nor = new Float32Array(itens.length * 18), cor = new Float32Array(itens.length * 18);
+      itens.forEach((it, k) => {
+        const v = [W(it[2]), W(it[3]), W(it[4]), W(it[5])]; nn.set(it[6][0], it[6][2], it[6][1]);
+        ab.subVectors(v[1], v[0]); ac.subVectors(v[2], v[0]);
+        const ordem = ab.cross(ac).dot(nn) >= 0 ? [0, 1, 2, 0, 2, 3] : [0, 2, 1, 0, 3, 2];
+        tc.set(COR[it[1]]).convertSRGBToLinear();
+        ordem.forEach((i, j) => { const o = k * 18 + j * 3; pos[o] = v[i].x; pos[o + 1] = v[i].y; pos[o + 2] = v[i].z; nor[o] = nn.x; nor[o + 1] = nn.y; nor[o + 2] = nn.z; cor[o] = tc.r; cor[o + 1] = tc.g; cor[o + 2] = tc.b; });
+      });
+      const geo = new T.BufferGeometry(); geo.setAttribute('position', new T.BufferAttribute(pos, 3)); geo.setAttribute('normal', new T.BufferAttribute(nor, 3));
+      if (!vidro) geo.setAttribute('color', new T.BufferAttribute(cor, 3));
+      const mat = vidro
+        ? new T.MeshLambertMaterial({ color: corL(COR.vidro), transparent: true, opacity: OPV, depthWrite: false, polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -2 })
+        : new T.MeshLambertMaterial({ color: 0xffffff, vertexColors: true });
+      const malha = new T.Mesh(geo, mat); malha.frustumCulled = false;
+      if (vidro) {
+        // só a face de vidro mais próxima é desenhada: as paredes ficam com um tom uniforme, sem "empilhar" transparências
+        const pre = new T.Mesh(geo, new T.MeshBasicMaterial({ colorWrite: false, transparent: true }));
+        pre.frustumCulled = false; pre.renderOrder = 20; malha.renderOrder = 21;
+        camadas.vidro.grupo.add(pre); camadas.vidro.mats.push({ m: mat, base: OPV, opaco: false });
+      } else camadas[nome].mats.push({ m: mat, base: 1, opaco: true });
+      camadas[nome].grupo.add(malha);
+    });
+
+    const tbs = agrupar(G.tubos), eixoY = new T.Vector3(0, 1, 0), dir = new T.Vector3();
+    Object.keys(tbs).forEach((nome) => {
+      const itens = tbs[nome], mat = new T.MeshLambertMaterial({ color: 0xffffff }), malha = new T.InstancedMesh(cano, mat, itens.length);
+      itens.forEach((it, k) => {
+        const a = W(it[2]), b = W(it[3]); dir.subVectors(b, a); const L = dir.length();
+        giro.position.copy(a).addScaledVector(dir, .5); giro.quaternion.setFromUnitVectors(eixoY, dir.normalize()); giro.scale.set(it[4], L, it[4]); giro.updateMatrix();
+        malha.setMatrixAt(k, giro.matrix); malha.setColorAt(k, tc.set(COR[it[1]]).convertSRGBToLinear());
+      });
+      malha.frustumCulled = false; camadas[nome].grupo.add(malha); camadas[nome].mats.push({ m: mat, base: 1, opaco: true });
+    });
+
+    const lns = {}; G.linhas.forEach((it) => { const k = it[0] + '|' + it[1]; (lns[k] = lns[k] || []).push(it); });
+    Object.keys(lns).forEach((k) => {
+      const nome = k.split('|')[0], st = TRACO[k.split('|')[1]], itens = lns[k], pos = new Float32Array(itens.length * 6);
+      itens.forEach((it, i) => { const a = W(it[2]), b = W(it[3]); pos.set([a.x, a.y, a.z, b.x, b.y, b.z], i * 6); });
+      const geo = new T.BufferGeometry(); geo.setAttribute('position', new T.BufferAttribute(pos, 3));
+      const mat = new T.LineBasicMaterial({ color: corL(st.cor), transparent: true, opacity: st.op, depthWrite: false });
+      const obj = new T.LineSegments(geo, mat); obj.frustumCulled = false; obj.renderOrder = st.ordem;
+      camadas[nome].grupo.add(obj); camadas[nome].mats.push({ m: mat, base: st.op, opaco: false });
+    });
+
+    // piso: brilho suave, sombra de contato e malha de 1 m alinhada ao canto do projeto
+    const TAM = 4600, cv = document.createElement('canvas'); cv.width = cv.height = 512;
+    const c2 = cv.getContext('2d'), gr = c2.createRadialGradient(256, 256, 0, 256, 256, 256);
+    gr.addColorStop(0, 'rgba(140,178,245,.36)'); gr.addColorStop(.4, 'rgba(120,160,235,.15)'); gr.addColorStop(1, 'rgba(120,160,235,0)');
+    c2.fillStyle = gr; c2.fillRect(0, 0, 512, 512);
+    const esc = 512 / TAM; c2.save(); c2.shadowColor = 'rgba(3,8,20,.62)'; c2.shadowBlur = 20; c2.shadowOffsetX = 2000; c2.fillStyle = '#000'; c2.beginPath();
+    G.pegada.forEach((c) => c2.rect(256 + (c.x0 - mx) * esc - 2000, 256 + (c.y0 - my) * esc, (c.x1 - c.x0) * esc + .5, (c.y1 - c.y0) * esc + .5));
+    c2.fill(); c2.restore();
+    const tex = new T.CanvasTexture(cv); tex.encoding = T.sRGBEncoding;
+    const chao = new T.Mesh(new T.PlaneGeometry(TAM, TAM), new T.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false }));
+    chao.rotation.x = -Math.PI / 2; chao.position.y = -1; chao.renderOrder = -6; camadas.piso.grupo.add(chao);
+    const RAIO = 1700, gp = [], gc = [], cg = corL(0x6f97dc);
+    const tom = (x, z, forte) => { const f = Math.max(0, 1 - Math.hypot(x, z) / RAIO), k = f * f * f * (forte ? .3 : .13); gc.push(cg.r * k, cg.g * k, cg.b * k); };
+    const riscar = (fixo, emX, forte) => { for (let s = 0; s < 20; s++) { const u0 = -RAIO + RAIO * s / 10, u1 = u0 + RAIO / 10;
+      if (emX) { gp.push(fixo, -.5, u0, fixo, -.5, u1); tom(fixo, u0, forte); tom(fixo, u1, forte); } else { gp.push(u0, -.5, fixo, u1, -.5, fixo); tom(u0, fixo, forte); tom(u1, fixo, forte); } } };
+    for (let k = Math.ceil((-RAIO + mx) / 100); -mx + k * 100 <= RAIO; k++) riscar(-mx + k * 100, true, k % 5 === 0);
+    for (let k = Math.ceil((-RAIO + my) / 100); -my + k * 100 <= RAIO; k++) riscar(-my + k * 100, false, k % 5 === 0);
+    const gg = new T.BufferGeometry(); gg.setAttribute('position', new T.Float32BufferAttribute(gp, 3)); gg.setAttribute('color', new T.Float32BufferAttribute(gc, 3));
+    const grade = new T.LineSegments(gg, new T.LineBasicMaterial({ vertexColors: true, transparent: true, blending: T.AdditiveBlending, depthWrite: false }));
+    grade.frustumCulled = false; grade.renderOrder = -5; camadas.piso.grupo.add(grade);
+
+    const aplicar = (c) => {
+      const v = c.v, s = v * v * (3 - 2 * v);
+      c.grupo.visible = v > .003;
+      c.grupo.position.y = c.sobe * (1 - s);
+      c.mats.forEach((x) => { x.m.opacity = x.base * (x.opaco ? s : v); const tr = !x.opaco || v < .997; if (x.m.transparent !== tr) { x.m.transparent = tr; x.m.needsUpdate = true; } });
+    };
+
+    const alvo = new T.Vector3(0, G.baixo * .68, 0), pts = G.pontos.map(W), tmp = new T.Vector3();
+    const ELS = [5, 12, 19, 26, 33, 40, 47, 54, 61, 68].map(rad);
+    let tabD = ELS.map(() => 3200), tabY = ELS.map(() => alvo.y);
+    const naTabela = (tab, el) => { const t = limitar((el - ELS[0]) / (ELS[1] - ELS[0]), 0, ELS.length - 1), i = Math.min(ELS.length - 2, Math.floor(t)); return tab[i] + (tab[i + 1] - tab[i]) * (t - i); };
+    const por = (d, az, el, y) => {
+      const ce = Math.cos(el); alvo.y = y;
+      cam.position.set(alvo.x + d * Math.sin(az) * ce, alvo.y + d * Math.sin(el), alvo.z + d * Math.cos(az) * ce);
+      cam.lookAt(alvo);
+    };
+    const posicionar = (p) => por(naTabela(tabD, p.el) / p.zoom, p.az, p.el, naTabela(tabY, p.el));
+    // para cada inclinação: a distância em que o projeto cabe na tela em qualquer giro, e a altura que o deixa centrado
+    const caber = (aspecto) => {
+      cam.aspect = aspecto; cam.updateProjectionMatrix();
+      const mxh = aspecto < 1.15 ? .94 : .9, mxv = .84, tg = Math.tan(rad(cam.fov / 2));
+      const medir = (d, el, y) => {
+        let x = 0, y0 = 9, y1 = -9;
+        for (let az = 0; az < 360; az += 15) {
+          por(d, rad(az), el, y); cam.updateMatrixWorld(true);
+          for (const q of pts) { tmp.copy(q).project(cam); x = Math.max(x, Math.abs(tmp.x)); y0 = Math.min(y0, tmp.y); y1 = Math.max(y1, tmp.y); }
+        }
+        return { x, y0, y1 };
+      };
+      const D = [], Y = [];
+      ELS.forEach((el) => {
+        let y = G.baixo * .68, d = 3200;
+        for (let volta = 0; volta < 4; volta++) {
+          let lo = 700, hi = 16000;
+          for (let k = 0; k < 18; k++) { const m = (lo + hi) / 2, r = medir(m, el, y); if (r.x <= mxh && r.y1 <= mxv && r.y0 >= -mxv) hi = m; else lo = m; }
+          d = hi;
+          const r = medir(d, el, y); y += (r.y0 + r.y1) / 2 * d * tg / Math.max(.35, Math.cos(el));
+        }
+        D.push(d); Y.push(y);
+      });
+      tabD = D; tabY = Y;
+    };
+    return { cena, cam, camadas, aplicar, posicionar, caber, contagem: { caixas: G.caixas.length, tubos: G.tubos.length, linhas: G.linhas.length, planos: G.planos.length } };
+  };
+
+  // ---------- Estado, passeio e controles ----------
+  let R = null, renderer = null, estado = 'completo', pendente = null;
+  let tour = !calmo, girar = !calmo, tTour = 0, olharLivre = false, arrastando = false, naTela = false, emCena = false;
+  const pose = { az: rad(38), el: rad(25), elAlvo: rad(25), zoom: 1, zoomAlvo: 1, vAz: 0 };
+  const VEL = rad(5.5), ZMIN = .7, ZMAX = 2.6;
+  const barra = (n) => { const a = abas.find((x) => x.dataset.estado === n); return a ? a.querySelector('.bar') : null; };
+
+  const mostrar = (nome, direto) => {
+    const E = ESTADOS[nome]; if (!E) return;
+    const mudou = nome !== estado; estado = nome; tTour = 0;
+    abas.forEach((a) => { const on = a.dataset.estado === nome; a.setAttribute('aria-pressed', on ? 'true' : 'false'); const b = a.querySelector('.bar'); if (b) b.style.transform = ''; });
+    capT.textContent = E.nome; capS.textContent = E.txt;
+    if (mudou && !direto && !calmo) { legenda.classList.remove('troca'); void legenda.offsetWidth; legenda.classList.add('troca'); }
+    if (!R) { pendente = nome; return; }
+    let atraso = 0;
+    NOMES.forEach((n) => {
+      const c = R.camadas[n], alvo = E.ver[n];
+      c.espera = (!direto && alvo > c.alvo + .01 && c.sobe) ? (atraso += .14) : 0;
+      c.alvo = alvo;
+      if (direto) { c.v = alvo; R.aplicar(c); }
+    });
+    if (!olharLivre) { pose.elAlvo = rad(E.el); if (direto) pose.el = pose.elAlvo; }
+    pedir();
+  };
+
+  const atualizar = (dt) => {
+    let vivo = false;
+    if (tour && emCena && !arrastando) {
+      tTour += dt;
+      const f = Math.min(1, tTour / ESTADOS[estado].dur), b = barra(estado);
+      if (b) b.style.transform = 'scaleX(' + f.toFixed(4) + ')';
+      if (f >= 1) mostrar(ORDEM[(ORDEM.indexOf(estado) + 1) % ORDEM.length]);
+      vivo = true;
+    }
+    if (girar && emCena && !arrastando) { pose.az += VEL * dt; vivo = true; }
+    if (!arrastando && Math.abs(pose.vAz) > .004) { pose.az += pose.vAz * dt; pose.vAz *= Math.exp(-3.4 * dt); vivo = true; }
+    if (Math.abs(pose.elAlvo - pose.el) > .0006) { pose.el += (pose.elAlvo - pose.el) * (1 - Math.exp(-2.4 * dt)); vivo = true; }
+    if (Math.abs(pose.zoomAlvo - pose.zoom) > .0006) { pose.zoom += (pose.zoomAlvo - pose.zoom) * (1 - Math.exp(-9 * dt)); vivo = true; }
+    NOMES.forEach((n) => {
+      const c = R.camadas[n]; if (c.v === c.alvo) return;
+      vivo = true;
+      if (c.espera > 0) { c.espera -= dt; return; }
+      const passo = dt / (calmo ? .02 : .6);
+      c.v = c.v < c.alvo ? Math.min(c.alvo, c.v + passo) : Math.max(c.alvo, c.v - passo);
+      R.aplicar(c);
+    });
+    R.posicionar(pose);
+    return vivo;
+  };
+
+  let raf = 0, ult = 0;
+  const quadro = (t) => {
+    raf = 0;
+    const dt = ult ? Math.min(.1, (t - ult) / 1000) : 0; ult = t;
+    const vivo = atualizar(dt);
+    renderer.render(R.cena, R.cam);
+    if (vivo) pedir(); else ult = 0;
+  };
+  function pedir() { if (!raf && R && naTela && !document.hidden) raf = requestAnimationFrame(quadro); }
+
+  const ajustar = () => {
+    if (!R) return;
+    const w = palco.clientWidth, h = palco.clientHeight; if (!w || !h) return;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.setSize(w, h, false);
+    R.caber(w / h);
+    pedir();
+  };
+
+  const marcarTour = () => {
+    if (!btTour) return;
+    btTour.setAttribute('aria-pressed', tour ? 'true' : 'false');
+    btTour.setAttribute('aria-label', tour ? 'Pausar a apresentação' : 'Continuar a apresentação');
+    if (!tour) { const b = barra(estado); if (b) b.style.transform = ''; }
+  };
+  const tocar = () => { secao.classList.add('tocado'); tour = false; girar = false; marcarTour(); };
+
+  const ligarControles = () => {
+    const dedos = new Map(); let pinca = 0, ultMov = 0;
+    canvas.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      try { canvas.setPointerCapture(e.pointerId); } catch (err) { /* sem captura, o arraste continua pelo próprio canvas */ }
+      dedos.set(e.pointerId, { x: e.clientX, y: e.clientY }); arrastando = true; pose.vAz = 0; ultMov = performance.now(); tocar();
+    });
+    canvas.addEventListener('pointermove', (e) => {
+      const p = dedos.get(e.pointerId); if (!p) return;
+      const dx = e.clientX - p.x, dy = e.clientY - p.y; p.x = e.clientX; p.y = e.clientY;
+      const w = canvas.clientWidth || 1;
+      if (dedos.size === 1) {
+        const dAz = -dx / w * Math.PI * (e.pointerType === 'touch' ? 1 : 1.2), agora = performance.now(), dtm = Math.max(8, agora - ultMov) / 1000; ultMov = agora;
+        pose.az += dAz; pose.vAz = limitar(.55 * pose.vAz + .45 * dAz / dtm, -5, 5);
+        pose.el = limitar(pose.el + dy / w * 1.7, rad(5), rad(66)); pose.elAlvo = pose.el; olharLivre = true;
+      } else if (dedos.size === 2) {
+        const v = Array.from(dedos.values()), d = Math.hypot(v[0].x - v[1].x, v[0].y - v[1].y);
+        if (pinca) { pose.zoomAlvo = limitar(pose.zoomAlvo * d / pinca, ZMIN, ZMAX); pose.zoom = pose.zoomAlvo; }
+        pinca = d; pose.vAz = 0;
+      }
+      pedir();
+    });
+    const soltar = (e) => {
+      if (!dedos.delete(e.pointerId)) return;
+      if (dedos.size < 2) pinca = 0;
+      if (!dedos.size) { arrastando = false; if (performance.now() - ultMov > 90 || calmo) pose.vAz = 0; }
+      pedir();
+    };
+    ['pointerup', 'pointercancel', 'lostpointercapture'].forEach((ev) => canvas.addEventListener(ev, soltar));
+    canvas.addEventListener('wheel', (e) => { if (!e.ctrlKey) return; e.preventDefault(); pose.zoomAlvo = limitar(pose.zoomAlvo * Math.exp(-e.deltaY * .01), ZMIN, ZMAX); pedir(); }, { passive: false });
+    canvas.addEventListener('dblclick', () => { pose.zoomAlvo = 1; olharLivre = false; pose.elAlvo = rad(ESTADOS[estado].el); pedir(); });
+    canvas.addEventListener('keydown', (e) => {
+      const k = e.key; let usou = true;
+      if (k === 'ArrowLeft') pose.az -= rad(12); else if (k === 'ArrowRight') pose.az += rad(12);
+      else if (k === 'ArrowUp') { pose.elAlvo = limitar(pose.elAlvo + rad(6), rad(5), rad(66)); olharLivre = true; }
+      else if (k === 'ArrowDown') { pose.elAlvo = limitar(pose.elAlvo - rad(6), rad(5), rad(66)); olharLivre = true; }
+      else if (k === '+' || k === '=') pose.zoomAlvo = limitar(pose.zoomAlvo * 1.2, ZMIN, ZMAX);
+      else if (k === '-' || k === '_') pose.zoomAlvo = limitar(pose.zoomAlvo / 1.2, ZMIN, ZMAX);
+      else usou = false;
+      if (usou) { e.preventDefault(); tocar(); pedir(); }
+    });
+    secao.querySelectorAll('[data-m3d]').forEach((b) => b.addEventListener('click', () => {
+      const a = b.dataset.m3d;
+      if (a === 'mais') pose.zoomAlvo = limitar(pose.zoomAlvo * 1.3, ZMIN, ZMAX);
+      else if (a === 'menos') pose.zoomAlvo = limitar(pose.zoomAlvo / 1.3, ZMIN, ZMAX);
+      else if (a === 'tour') {
+        tour = !tour; girar = tour && !calmo;
+        if (tour) { olharLivre = false; tTour = 0; pose.elAlvo = rad(ESTADOS[estado].el); secao.classList.remove('tocado'); }
+        marcarTour();
+      }
+      pedir();
+    }));
+  };
+
+  // ---------- Carregamento sob demanda ----------
+  const carregar = () => new Promise((ok, falha) => {
+    if (window.THREE) { ok(); return; }
+    // three.js r128, das bibliotecas públicas. O navegador só aceita o arquivo se ele for exatamente o esperado (integridade).
+    const SRI = 'sha512-dLxUelApnYxpLt6K2iomGngnHO83iUvZytA3YjDUCjT0HDOHKXnVYdf3hU4JjM8uEhxf9nD1/ey98U3t2vZ0qQ==';
+    const fontes = ['https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js', 'https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js'];
+    const tentar = (k) => {
+      if (k >= fontes.length) { falha(new Error('biblioteca 3D indisponível')); return; }
+      const s = document.createElement('script'); s.src = fontes[k]; s.async = true; s.integrity = SRI; s.crossOrigin = 'anonymous'; s.referrerPolicy = 'no-referrer';
+      s.onload = () => { if (window.THREE) ok(); else tentar(k + 1); };
+      s.onerror = () => tentar(k + 1);
+      document.head.appendChild(s);
+    };
+    tentar(0);
+  });
+
+  let comecou = null;
+  const iniciar = () => {
+    if (comecou) return comecou;
+    comecou = carregar().then(() => {
+      const T = window.THREE;
+      renderer = new T.WebGLRenderer({ canvas, antialias: true, alpha: false });
+      renderer.outputEncoding = T.sRGBEncoding;
+      R = construir(T, JSON.parse(fonte.textContent));
+      ligarControles();
+      ajustar();
+      mostrar(pendente || estado, true);
+      R.posicionar(pose); renderer.render(R.cena, R.cam);
+      secao.classList.add('vivo');
+      marcarTour();
+      if ('ResizeObserver' in window) new ResizeObserver(ajustar).observe(palco); else window.addEventListener('resize', ajustar);
+      document.addEventListener('visibilitychange', pedir);
+      canvas.addEventListener('webglcontextlost', (e) => { e.preventDefault(); secao.classList.remove('vivo'); });
+      canvas.addEventListener('webglcontextrestored', () => { secao.classList.add('vivo'); pedir(); });
+      pedir();
+    }).catch(() => { secao.classList.add('sem3d'); R = null; });
+    return comecou;
+  };
+
+  abas.forEach((a) => a.addEventListener('click', () => { tour = false; marcarTour(); mostrar(a.dataset.estado); iniciar(); }));
+
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver((ents) => ents.forEach((en) => { if (en.isIntersecting) iniciar(); }), { rootMargin: '700px 0px' }).observe(secao);
+    new IntersectionObserver((ents) => ents.forEach((en) => { naTela = en.isIntersecting; emCena = en.intersectionRatio >= .3; if (naTela) pedir(); }), { threshold: [0, .3] }).observe(palco);
+  } else { naTela = emCena = true; iniciar(); }
+
+  // para conferência e para gerar a imagem de capa
+  window.CADLAJE3D = {
+    iniciar,
+    ver: (nome) => iniciar().then(() => { mostrar(nome, true); pedir(); }),
+    camera: (o) => iniciar().then(() => { if (o.az != null) pose.az = rad(o.az); if (o.el != null) { pose.el = pose.elAlvo = rad(o.el); olharLivre = true; } if (o.zoom != null) pose.zoom = pose.zoomAlvo = o.zoom; pedir(); }),
+    parar: () => { tour = false; girar = false; marcarTour(); },
+    passo: (dt, n) => { for (let k = 0; k < (n || 1); k++) atualizar(dt); renderer.render(R.cena, R.cam); },
+    ir: (nome) => mostrar(nome),
+    info: () => (R ? R.contagem : null),
+    agora: () => ({ estado, az: pose.az * 180 / Math.PI, el: pose.el * 180 / Math.PI, zoom: pose.zoomAlvo, tour, girar })
+  };
+})();
+/*M3D:FIM*/
+</script>
+</body>
+</html>
